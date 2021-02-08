@@ -11,5 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://wjr-z.gitee.io/sitemap.xml
-Sitemap: https://wjr-z.gitee.io/baidusitemap.xml
+Sitemap: https://wjr-z.com/sitemap.xml
+Sitemap: https://wjr-z.com/baidusitemap.xml
