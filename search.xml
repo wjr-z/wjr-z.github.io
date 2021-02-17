@@ -116,6 +116,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Codeforces Round#695 Div.2</title>
+    <url>/CodeforcesR695/</url>
+    <content><![CDATA[<h2 id="A-Wizard-of-Orz"><a href="#A-Wizard-of-Orz" class="headerlink" title="A. Wizard of Orz"></a>A. Wizard of Orz</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ2Ny9wcm9ibGVtL0E=">题目链接<i class="fa fa-external-link-alt"></i></span><br><a id="more"></a><br>题意：长度为n的数组，选择某一位为任意0~9，从其开始至左右两端逐渐递增（依然在0~9之间），问最大的数。<br>题解：<br>此题有坑，可能会想到第一位为9然后一直递减下去，但这样并不是最大的。<br>如果n&gt;2，则第三位是7，但是如果选第二位是8，则第一位都为9且第三位是9，因此当n&gt;2时选第二位为8即可。</p>
+<h2 id="B-Hills-And-Valleys"><a href="#B-Hills-And-Valleys" class="headerlink" title="B. Hills And Valleys"></a>B. Hills And Valleys</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ2Ny9wcm9ibGVtL0I=">题目链接<i class="fa fa-external-link-alt"></i></span><br>题意：给定长度为n的数组，定义山峰为比左右两边都大的数，山谷为比左右两边都小的，可以修改一个数，问最小的山峰山谷数。<br>题解：<br>挺简单的，先求出初始的山峰+山谷数量，然后依次枚举每个数，将其修改为其左边、右边的数然后取最小即可。<br>因为只修改了一个数最多影响三个位置的状态。</p>
+<h2 id="C-Three-Bags"><a href="#C-Three-Bags" class="headerlink" title="C. Three Bags"></a>C. Three Bags</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ2Ny9wcm9ibGVtL0M=">题目链接<i class="fa fa-external-link-alt"></i></span><br>题意：给了三组数，每次给以从两个非空数组中各选出一个数，假设先从一个取出A,后一个取出B，则将A-B放入取出A的数组，问最后能得到的最大值。<br>题解：<br>挺不错的思维题。<br>首先如果某一个数被合并了偶数次，那么他是它本身，否则是相反数。<br>能想到这一步基本就做出来了。<br>1.一个数组的情况，如果没有不同的数组的限制，那么想要最大，我们可以让大部分数都合并两次，最小的数合并一次。<br>我们随便取一个除了最小的数之外的数，然后将其他所有的非最小数合并到最小数上，再将最小的数合并到之前那个随便取的数，这样就是最大的，只减去了一个最小的数。<br>2.如果是两个数组，还是假设最后合并的数在第一个数组，则第二个数组无论如何合并都是奇数次，第一个数组无论如何都是偶数次，所以即减去第二个数组的和。<br>3.如果是三个数组，还是假设最后合并的数在第一个数组。<br>我们不妨将第二个数组除了最小的数都合并到第三个数组的最小的数，第三个数组除了最小的数都合并到第二个数组最小的数上。<br>这样再合并到第一个数组大部分数都是合并了偶数次，会比较优。<br>接下来会有两种情况，一种是将这两个数组最小的数都合并到第一个数组，即答案为sum-2*(min[2]+min[3])(sum为所有数总和，min[i]表示第i个数组的最小的数)<br>一种是将其中一个数组的最小的数再合并到另一个最小数上，再合并到第一个数组，这样其实最后答案就是减去了其中一个数组。</p>
+<p>然后枚举最后的数所在的数组，再在两种情况中取最大即可。</p>
+<p>D E 没做了，打了一半去休息了，以后填坑。（<del>以后你还记得个鬼</del>）</p>
+]]></content>
+      <tags>
+        <tag>cf比赛</tag>
+        <tag>构造</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Educational Codeforces Round 102 (Rated for Div. 2)</title>
     <url>/Educational-Codeforces-Round-102-Rated-for-Div-2/</url>
     <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ3My8=">比赛链接<i class="fa fa-external-link-alt"></i></span></p>
@@ -149,44 +163,6 @@
 <h2 id="E、F、G待填坑"><a href="#E、F、G待填坑" class="headerlink" title="E、F、G待填坑"></a>E、F、G待填坑</h2>]]></content>
       <tags>
         <tag>cf比赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HNOI2011 Problem b</title>
-    <url>/HNOI2011-Problem-b/</url>
-    <content><![CDATA[<ul>
-<li>莫比乌斯反演入门题，让刚学莫比乌斯反演的我有了继续学下去的欲望。</li>
-</ul>
-<a id="more"></a>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>n 次询问 $\sum_{i=a}^{b}\sum_{j=c}^{d} [gcd(i,j)==k]$ 。<br><span class="exturl" data-url="aHR0cHM6Ly93d3cubHVvZ3UuY29tLmNuL3Byb2JsZW0vUDI1MjI=">题目链接<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>数学题没啥好说的，这题显然的莫比乌斯反演题，把其变为可以莫比乌斯反演的形式即可。<br>并且可以用一个简单地容斥将下限都换成 1 。<br>设 $f(k)=\sum_{i=1}^{n}\sum_{j=1}^{m}[gcd(i,j)==k]$ ， $F(k)=\sum_{i=1}^{n}\sum_{j=1}^{m}[k|gcd(i,j)]$<br/><br>则有<br>$F(k)=\sum_{k|d}f(d)=\lfloor\frac{n}{k}\rfloor\lfloor\frac{m}{k}\rfloor$<br>前者很显然，后者因为只要求是 k 倍数的gcd，则 i , j 均为 k 的倍数即可。<br>然后我们开始愉快的推式子：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&\because F(k)=\sum_{k|d}f(d) \\
-&\therefore f(k) =\sum_{k|d}\mu(\frac{d}{k})F(d) \\
-\end{aligned}</script><p>即</p>
-<script type="math/tex; mode=display">
-f(k) = \sum_{k|d}\mu(\frac{d}{k})\lfloor\frac{n}{d}\rfloor \lfloor\frac{m}{d}\rfloor</script><p>再令 $T=\frac{d}{k}$</p>
-<script type="math/tex; mode=display">
-f(k)=\sum_{T}^{\frac{min(n,m)}{k}}\mu(R)\lfloor\frac{n}{kT}\rfloor \lfloor\frac{m}{kT}\rfloor</script><p>然后整除分块即可。<br>关于整除分块，其实就是将$\frac{n}{kT}\frac{m}{KT}$相同的一起处理<br/><br>比如当$T\in(L,R)$时$\frac{n}{kT}\frac{m}{KT}$相同，则这一部分答案为$\frac{n}{kT}\frac{m}{KT}\sum_{i=L}^{R}\mu(i)$，预处理一下莫比乌斯函数的前缀和就好。</p>
-<p>代码如下<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5e4</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> prime[N],mu[N];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> sum[N];</span><br><span class="line"><span class="keyword">bool</span> f[N];</span><br><span class="line"><span class="keyword">int</span> a,b,c,d,k;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    mu[<span class="number">1</span>]=<span class="number">1</span>,f[<span class="number">1</span>]=<span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">int</span> maxn=<span class="number">5e4</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=maxn;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!f[i])&#123;</span><br><span class="line">            prime[++prime[<span class="number">0</span>]]=i;</span><br><span class="line">            mu[i]=<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=prime[<span class="number">0</span>]&amp;&amp;i*prime[j]&lt;=maxn;++j)&#123;</span><br><span class="line">            f[i*prime[j]]=<span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">            mu[i*prime[j]]=-mu[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=maxn;++i)</span><br><span class="line">        sum[i]=sum[i<span class="number">-1</span>]+mu[i];</span><br><span class="line">&#125;<span class="function"><span class="keyword">inline</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">F</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    n/=k,m/=k;</span><br><span class="line">    <span class="keyword">int</span> maxn=min(n,m);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">1</span>,r=<span class="number">1</span>;l&lt;=maxn;l=r+<span class="number">1</span>)&#123;</span><br><span class="line">        r=min(n/(n/l),m/(m/l));</span><br><span class="line">        ans+=(sum[r]-sum[l<span class="number">-1</span>])*(n/l)*(m/l);</span><br><span class="line">    &#125;<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    init();</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;c,&amp;d,&amp;k);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,F(b,d,k)-F(b,c<span class="number">-1</span>,k)-F(a<span class="number">-1</span>,d,k)+F(a<span class="number">-1</span>,c<span class="number">-1</span>,k));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>莫比乌斯反演</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Codeforces Round#695 Div.2</title>
-    <url>/CodeforcesR695/</url>
-    <content><![CDATA[<h2 id="A-Wizard-of-Orz"><a href="#A-Wizard-of-Orz" class="headerlink" title="A. Wizard of Orz"></a>A. Wizard of Orz</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ2Ny9wcm9ibGVtL0E=">题目链接<i class="fa fa-external-link-alt"></i></span><br><a id="more"></a><br>题意：长度为n的数组，选择某一位为任意0~9，从其开始至左右两端逐渐递增（依然在0~9之间），问最大的数。<br>题解：<br>此题有坑，可能会想到第一位为9然后一直递减下去，但这样并不是最大的。<br>如果n&gt;2，则第三位是7，但是如果选第二位是8，则第一位都为9且第三位是9，因此当n&gt;2时选第二位为8即可。</p>
-<h2 id="B-Hills-And-Valleys"><a href="#B-Hills-And-Valleys" class="headerlink" title="B. Hills And Valleys"></a>B. Hills And Valleys</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ2Ny9wcm9ibGVtL0I=">题目链接<i class="fa fa-external-link-alt"></i></span><br>题意：给定长度为n的数组，定义山峰为比左右两边都大的数，山谷为比左右两边都小的，可以修改一个数，问最小的山峰山谷数。<br>题解：<br>挺简单的，先求出初始的山峰+山谷数量，然后依次枚举每个数，将其修改为其左边、右边的数然后取最小即可。<br>因为只修改了一个数最多影响三个位置的状态。</p>
-<h2 id="C-Three-Bags"><a href="#C-Three-Bags" class="headerlink" title="C. Three Bags"></a>C. Three Bags</h2><p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlZm9yY2VzLm1sL2NvbnRlc3QvMTQ2Ny9wcm9ibGVtL0M=">题目链接<i class="fa fa-external-link-alt"></i></span><br>题意：给了三组数，每次给以从两个非空数组中各选出一个数，假设先从一个取出A,后一个取出B，则将A-B放入取出A的数组，问最后能得到的最大值。<br>题解：<br>挺不错的思维题。<br>首先如果某一个数被合并了偶数次，那么他是它本身，否则是相反数。<br>能想到这一步基本就做出来了。<br>1.一个数组的情况，如果没有不同的数组的限制，那么想要最大，我们可以让大部分数都合并两次，最小的数合并一次。<br>我们随便取一个除了最小的数之外的数，然后将其他所有的非最小数合并到最小数上，再将最小的数合并到之前那个随便取的数，这样就是最大的，只减去了一个最小的数。<br>2.如果是两个数组，还是假设最后合并的数在第一个数组，则第二个数组无论如何合并都是奇数次，第一个数组无论如何都是偶数次，所以即减去第二个数组的和。<br>3.如果是三个数组，还是假设最后合并的数在第一个数组。<br>我们不妨将第二个数组除了最小的数都合并到第三个数组的最小的数，第三个数组除了最小的数都合并到第二个数组最小的数上。<br>这样再合并到第一个数组大部分数都是合并了偶数次，会比较优。<br>接下来会有两种情况，一种是将这两个数组最小的数都合并到第一个数组，即答案为sum-2*(min[2]+min[3])(sum为所有数总和，min[i]表示第i个数组的最小的数)<br>一种是将其中一个数组的最小的数再合并到另一个最小数上，再合并到第一个数组，这样其实最后答案就是减去了其中一个数组。</p>
-<p>然后枚举最后的数所在的数组，再在两种情况中取最大即可。</p>
-<p>D E 没做了，打了一半去休息了，以后填坑。（<del>以后你还记得个鬼</del>）</p>
-]]></content>
-      <tags>
-        <tag>cf比赛</tag>
-        <tag>构造</tag>
       </tags>
   </entry>
   <entry>
@@ -374,6 +350,30 @@ f(k)=\sum_{T}^{\frac{min(n,m)}{k}}\mu(R)\lfloor\frac{n}{kT}\rfloor \lfloor\frac{
       </tags>
   </entry>
   <entry>
+    <title>HNOI2011 Problem b</title>
+    <url>/HNOI2011-Problem-b/</url>
+    <content><![CDATA[<ul>
+<li>莫比乌斯反演入门题，让刚学莫比乌斯反演的我有了继续学下去的欲望。</li>
+</ul>
+<a id="more"></a>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>n 次询问 $\sum_{i=a}^{b}\sum_{j=c}^{d} [gcd(i,j)==k]$ 。<br><span class="exturl" data-url="aHR0cHM6Ly93d3cubHVvZ3UuY29tLmNuL3Byb2JsZW0vUDI1MjI=">题目链接<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>数学题没啥好说的，这题显然的莫比乌斯反演题，把其变为可以莫比乌斯反演的形式即可。<br>并且可以用一个简单地容斥将下限都换成 1 。<br>设 $f(k)=\sum_{i=1}^{n}\sum_{j=1}^{m}[gcd(i,j)==k]$ ， $F(k)=\sum_{i=1}^{n}\sum_{j=1}^{m}[k|gcd(i,j)]$<br/><br>则有<br>$F(k)=\sum_{k|d}f(d)=\lfloor\frac{n}{k}\rfloor\lfloor\frac{m}{k}\rfloor$<br>前者很显然，后者因为只要求是 k 倍数的gcd，则 i , j 均为 k 的倍数即可。<br>然后我们开始愉快的推式子：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\because F(k)=\sum_{k|d}f(d) \\
+&\therefore f(k) =\sum_{k|d}\mu(\frac{d}{k})F(d) \\
+\end{aligned}</script><p>即</p>
+<script type="math/tex; mode=display">
+f(k) = \sum_{k|d}\mu(\frac{d}{k})\lfloor\frac{n}{d}\rfloor \lfloor\frac{m}{d}\rfloor</script><p>再令 $T=\frac{d}{k}$</p>
+<script type="math/tex; mode=display">
+f(k)=\sum_{T}^{\frac{min(n,m)}{k}}\mu(R)\lfloor\frac{n}{kT}\rfloor \lfloor\frac{m}{kT}\rfloor</script><p>然后整除分块即可。<br>关于整除分块，其实就是将$\frac{n}{kT}\frac{m}{KT}$相同的一起处理<br/><br>比如当$T\in(L,R)$时$\frac{n}{kT}\frac{m}{KT}$相同，则这一部分答案为$\frac{n}{kT}\frac{m}{KT}\sum_{i=L}^{R}\mu(i)$，预处理一下莫比乌斯函数的前缀和就好。</p>
+<p>代码如下<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5e4</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> prime[N],mu[N];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> sum[N];</span><br><span class="line"><span class="keyword">bool</span> f[N];</span><br><span class="line"><span class="keyword">int</span> a,b,c,d,k;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    mu[<span class="number">1</span>]=<span class="number">1</span>,f[<span class="number">1</span>]=<span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">int</span> maxn=<span class="number">5e4</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=maxn;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!f[i])&#123;</span><br><span class="line">            prime[++prime[<span class="number">0</span>]]=i;</span><br><span class="line">            mu[i]=<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=prime[<span class="number">0</span>]&amp;&amp;i*prime[j]&lt;=maxn;++j)&#123;</span><br><span class="line">            f[i*prime[j]]=<span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(i%prime[j]==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">            mu[i*prime[j]]=-mu[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=maxn;++i)</span><br><span class="line">        sum[i]=sum[i<span class="number">-1</span>]+mu[i];</span><br><span class="line">&#125;<span class="function"><span class="keyword">inline</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">F</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m,<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    n/=k,m/=k;</span><br><span class="line">    <span class="keyword">int</span> maxn=min(n,m);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">1</span>,r=<span class="number">1</span>;l&lt;=maxn;l=r+<span class="number">1</span>)&#123;</span><br><span class="line">        r=min(n/(n/l),m/(m/l));</span><br><span class="line">        ans+=(sum[r]-sum[l<span class="number">-1</span>])*(n/l)*(m/l);</span><br><span class="line">    &#125;<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    init();</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">while</span>(n--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d%d&quot;</span>,&amp;a,&amp;b,&amp;c,&amp;d,&amp;k);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,F(b,d,k)-F(b,c<span class="number">-1</span>,k)-F(a<span class="number">-1</span>,d,k)+F(a<span class="number">-1</span>,c<span class="number">-1</span>,k));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>莫比乌斯反演</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>KMP详解</title>
     <url>/KMP%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<p>KMP算法的核心，是一个被称为 <strong>部分匹配表(Partial Match Table)</strong> 的数组。我觉得理解KMP的最大障碍就是很多人在看了很多关于KMP的文章之后，仍然搞不懂PMT中的值代表了什么意思。这里我们抛开所有的枝枝蔓蔓，先来解释一下这个数据到底是什么。<br><a id="more"></a><br>对于字符串“abababca”，它的PMT如下表所示:<br><img data-src="https://pic2.zhimg.com/v2-e905ece7e7d8be90afc62fe9595a9b0f_r.jpg?source=1940ef5c" alt=""><br>就像例子中所示的，如果待匹配的模式字符串有8个字符，那么PMT就会有8个值。</p>
@@ -398,6 +398,34 @@ f(k)=\sum_{T}^{\frac{min(n,m)}{k}}\mu(R)\lfloor\frac{n}{kT}\rfloor \lfloor\frac{
       <tags>
         <tag>字符串</tag>
         <tag>KMP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SCOI2005最大子矩阵</title>
+    <url>/SCOI2005%E6%9C%80%E5%A4%A7%E5%AD%90%E7%9F%A9%E9%98%B5/</url>
+    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
+<p>这里有一个n*m的矩阵，请你选出其中k个子矩阵，使得这个k个子矩阵分值之和最大。<br>注意：选出的k个子矩阵 不能相互重叠。</p>
+</blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL3Byb2JsZW0vMjAyNDI=">题目链接<i class="fa fa-external-link-alt"></i></span><br><a id="more"></a></p>
+<p>题解：<br>题目范围很重要，$m\leq 2$，当m为1时即简单的数组中取k段连续和的最大值，令dp[i][j]表示前i个取j个子矩阵的最大值即可。<br>当m=2时，即将上述的二维dp改为三维dp即可，令dp[i][j][k]表示第一列前i个，第二列前j个中取k个子矩阵的最大值。<br>dp[i][j][k]初始为max(dp[i-1][j][k],dp[i][j-1][k])，表示不取的转移。<br>1.如果是当前取一个一列的矩阵，则分别在两列进行转移：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+dp[i][j][k]=max\{dp[p][j][k-1]+s1[i]-s1[p]\}\\
+dp[i][j][k]=max\{dp[i][p][k-1]+s2[i]-s2[p]\}
+\end{aligned}</script><p>2.如果是取一个两列的矩阵，则只能在i=j时进行转移：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+dp[i][i][k]=max\{dp[p][p][k-1]+s1[i]+s2[i]-s1[p]-s2[p]\}
+\end{aligned}</script><p>其中s1表示第一列前缀和，s2表示第二列前缀和。</p>
+<p>不过后来我发现这样做还是有些问题的，如果m=1并且第一列全为负数，这样第二列当做0算，这样取的k个子矩阵可能有第二列的，但这是非法的，因此需要考虑将m=1和m=2分开来做或者是第二列前缀和进行修改。<br>因为数据范围并不大，因此对第二列前缀和修改即可，而且此题貌似数据也很弱，不考虑也能过。</p>
+<details>
+    <summary>参考代码</summary>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">105</span>][<span class="number">105</span>][<span class="number">12</span>],s[<span class="number">105</span>][<span class="number">3</span>];</span><br><span class="line"><span class="keyword">int</span> n,m,k;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">105</span>][<span class="number">3</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0xf3</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;n,&amp;m,&amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;++j)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][j]);</span><br><span class="line">            s[i][j]=s[i<span class="number">-1</span>][j]+a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n;++j)</span><br><span class="line">            dp[i][j][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(m==<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">            s[i][<span class="number">2</span>]=-i*<span class="number">1e7</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> p=<span class="number">1</span>;p&lt;=k;++p)<span class="comment">//取p个子矩阵</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)<span class="comment">//第一列</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)&#123;<span class="comment">//第二列</span></span><br><span class="line">                dp[i][j][p]=max(dp[i<span class="number">-1</span>][j][p],dp[i][j<span class="number">-1</span>][p]);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;i;++l)</span><br><span class="line">                    dp[i][j][p]=max(dp[i][j][p],dp[l][j][p<span class="number">-1</span>]+s[i][<span class="number">1</span>]-s[l][<span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;j;++l)</span><br><span class="line">                    dp[i][j][p]=max(dp[i][j][p],dp[i][l][p<span class="number">-1</span>]+s[j][<span class="number">2</span>]-s[l][<span class="number">2</span>]);</span><br><span class="line">                <span class="keyword">if</span>(i==j)</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;i;++l)</span><br><span class="line">                        dp[i][j][p]=max(dp[i][j][p],dp[l][l][p<span class="number">-1</span>]+s[i][<span class="number">1</span>]+s[i][<span class="number">2</span>]-s[l][<span class="number">1</span>]-s[l][<span class="number">2</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,dp[n][n][k]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+]]></content>
+      <tags>
+        <tag>DP</tag>
+        <tag>牛客每日一题</tag>
       </tags>
   </entry>
   <entry>
@@ -434,37 +462,9 @@ F_{i}&=\frac{m+\sum_{T|i}\lfloor\frac{m}{T}\rfloor\sum_{d|T}\mu(\frac{T}{d})F_d[
 ]]></content>
       <tags>
         <tag>莫比乌斯反演</tag>
+        <tag>DP</tag>
+        <tag>牛客每日一题</tag>
         <tag>数论</tag>
-        <tag>DP</tag>
-        <tag>牛客每日一题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SCOI2005最大子矩阵</title>
-    <url>/SCOI2005%E6%9C%80%E5%A4%A7%E5%AD%90%E7%9F%A9%E9%98%B5/</url>
-    <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><blockquote>
-<p>这里有一个n*m的矩阵，请你选出其中k个子矩阵，使得这个k个子矩阵分值之和最大。<br>注意：选出的k个子矩阵 不能相互重叠。</p>
-</blockquote>
-<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL3Byb2JsZW0vMjAyNDI=">题目链接<i class="fa fa-external-link-alt"></i></span><br><a id="more"></a></p>
-<p>题解：<br>题目范围很重要，$m\leq 2$，当m为1时即简单的数组中取k段连续和的最大值，令dp[i][j]表示前i个取j个子矩阵的最大值即可。<br>当m=2时，即将上述的二维dp改为三维dp即可，令dp[i][j][k]表示第一列前i个，第二列前j个中取k个子矩阵的最大值。<br>dp[i][j][k]初始为max(dp[i-1][j][k],dp[i][j-1][k])，表示不取的转移。<br>1.如果是当前取一个一列的矩阵，则分别在两列进行转移：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-dp[i][j][k]=max\{dp[p][j][k-1]+s1[i]-s1[p]\}\\
-dp[i][j][k]=max\{dp[i][p][k-1]+s2[i]-s2[p]\}
-\end{aligned}</script><p>2.如果是取一个两列的矩阵，则只能在i=j时进行转移：</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-dp[i][i][k]=max\{dp[p][p][k-1]+s1[i]+s2[i]-s1[p]-s2[p]\}
-\end{aligned}</script><p>其中s1表示第一列前缀和，s2表示第二列前缀和。</p>
-<p>不过后来我发现这样做还是有些问题的，如果m=1并且第一列全为负数，这样第二列当做0算，这样取的k个子矩阵可能有第二列的，但这是非法的，因此需要考虑将m=1和m=2分开来做或者是第二列前缀和进行修改。<br>因为数据范围并不大，因此对第二列前缀和修改即可，而且此题貌似数据也很弱，不考虑也能过。</p>
-<details>
-    <summary>参考代码</summary>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">105</span>][<span class="number">105</span>][<span class="number">12</span>],s[<span class="number">105</span>][<span class="number">3</span>];</span><br><span class="line"><span class="keyword">int</span> n,m,k;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">105</span>][<span class="number">3</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0xf3</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;n,&amp;m,&amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;++j)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i][j]);</span><br><span class="line">            s[i][j]=s[i<span class="number">-1</span>][j]+a[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;++i)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=n;++j)</span><br><span class="line">            dp[i][j][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(m==<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">            s[i][<span class="number">2</span>]=-i*<span class="number">1e7</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> p=<span class="number">1</span>;p&lt;=k;++p)<span class="comment">//取p个子矩阵</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)<span class="comment">//第一列</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;++j)&#123;<span class="comment">//第二列</span></span><br><span class="line">                dp[i][j][p]=max(dp[i<span class="number">-1</span>][j][p],dp[i][j<span class="number">-1</span>][p]);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;i;++l)</span><br><span class="line">                    dp[i][j][p]=max(dp[i][j][p],dp[l][j][p<span class="number">-1</span>]+s[i][<span class="number">1</span>]-s[l][<span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;j;++l)</span><br><span class="line">                    dp[i][j][p]=max(dp[i][j][p],dp[i][l][p<span class="number">-1</span>]+s[j][<span class="number">2</span>]-s[l][<span class="number">2</span>]);</span><br><span class="line">                <span class="keyword">if</span>(i==j)</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">0</span>;l&lt;i;++l)</span><br><span class="line">                        dp[i][j][p]=max(dp[i][j][p],dp[l][l][p<span class="number">-1</span>]+s[i][<span class="number">1</span>]+s[i][<span class="number">2</span>]-s[l][<span class="number">1</span>]-s[l][<span class="number">2</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,dp[n][n][k]);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</details>
-]]></content>
-      <tags>
-        <tag>DP</tag>
-        <tag>牛客每日一题</tag>
       </tags>
   </entry>
   <entry>
@@ -552,25 +552,6 @@ Ans=\sum_{d=1}^{min(n,m)}\lfloor\frac{N}{d}\rfloor\lfloor\frac{M}{d}\rfloor(\sum
       </tags>
   </entry>
   <entry>
-    <title>codeforces美化</title>
-    <url>/codeforces%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<p>谷歌浏览器的codeforces美化方法。</p>
-<a id="more"></a>
-<p>点击谷歌浏览器右上角自定义及控制（竖着的三个点）<br><img data-src="https://tu.sunpma.com/imgs/2021/01/f4e7104bfe4762d7.png" alt=""><br>点击更多工具并进入扩展程序<br><img data-src="https://tu.sunpma.com/imgs/2021/01/17a05f81538ff962.png" alt=""><br>点击左上角扩展程序并点击弹出的窗口下面的“打开Chrome网上商店”<br><img data-src="https://tu.sunpma.com/imgs/2021/01/f3265b52ed36e54c.png" alt=""><br><img data-src="https://tu.sunpma.com/imgs/2021/01/649074f270b6af0f.png" alt=""><br>在搜索框内搜索stylus<br><img data-src="https://tu.sunpma.com/imgs/2021/01/ab28eb144e5d21e1.png" alt=""><br>点击第一个并添加到Chrome</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly91c2Vyc3R5bGVzLm9yZy9zdHlsZXMvMTkxNjY1L2NvZGVmb3JjZXM=">下载codeforces美化脚本<i class="fa fa-external-link-alt"></i></span></p>
-<p>(可能会比较慢)</p>
-<p>脚本有一个开启/关闭顶栏动画可选。</p>
-<p>Customize Settings中选择turn off即可关闭顶栏动画。（顶栏动画为动态）</p>
-<p>这里还有个wusoj的美化脚本（wustoj是武汉科技大学的OJ）<br><span class="exturl" data-url="aHR0cHM6Ly91c2Vyc3R5bGVzLm9yZy9zdHlsZXMvMTkwNDcxL3d1c3Rvag==">wustoj美化脚本<i class="fa fa-external-link-alt"></i></span></p>
-<p>为了方便起见，可以固定该扩展<br><img data-src="https://tu.sunpma.com/imgs/2021/01/c86897a69b90d969.png" alt=""></p>
-<p>如果想取消某个网站的所有脚本<br><img data-src="https://tu.sunpma.com/imgs/2021/01/3614a2eda352e992.png" alt=""></p>
-<p>如果想更换脚本或者更新脚本请在管理样式界面操作。</p>
-]]></content>
-      <tags>
-        <tag>网站美化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>codeforces Round 698(Div.2)</title>
     <url>/codeforcesR698/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>（其实是吐槽<br>昨天比赛刚开始换了三次网，换了两次镜像网站才勉强能看到题…<br>游戏体验极差，而且最后还掉了一点分。</p>
@@ -610,18 +591,6 @@ d_{i}&=(a_1-a_i)+...+(a_i-a_i)+(a_i-a_{i+1})...+(a_i-a_{n})+(a_i+a_{n})+(a_i+a_{
       </tags>
   </entry>
   <entry>
-    <title>二维hash</title>
-    <url>/%E4%BA%8C%E7%BB%B4hash/</url>
-    <content><![CDATA[<p>设sum[i][j]表示左上角为(1,1)，右下角为(i,j)的hash值，mod为模数。<br><a id="more"></a><br>则</p>
-<script type="math/tex; mode=display">sum[i][j]=(a[i][j]+sum[i-1][j-1]*base1*base2+sum[i-1][j]*base1+sum[i][j-1]*base2)\%mod</script><p>即可。<br>求左上角为(A,B)，右下角为(C,D)的hash值：</p>
-<script type="math/tex; mode=display">
-return (sum[C][D]+sum[A][B]*base1^{C-A}*base2^{D-B}-sum[A][D]*base1^{C-A}-sum[C][B]*base2^{D-B}+mod)\%mod;</script><p>和二维前缀和及其相似。<br>细节未处理，比如可能会溢出。<br>mod可以取1e9+7,base1和base2可以取孪生素数。</p>
-]]></content>
-      <tags>
-        <tag>hash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Educational Codeforces Round 103 (Rated for Div. 2)</title>
     <url>/eduRound103/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我居然能在B题上因为 long long 和向上取整错四次…（人才<br>好在之后几题比较顺<br><a id="more"></a></p>
@@ -653,6 +622,25 @@ return (sum[C][D]+sum[A][B]*base1^{C-A}*base2^{D-B}-sum[A][D]*base1^{C-A}-sum[C]
 ]]></content>
       <tags>
         <tag>cf比赛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>codeforces美化</title>
+    <url>/codeforces%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<p>谷歌浏览器的codeforces美化方法。</p>
+<a id="more"></a>
+<p>点击谷歌浏览器右上角自定义及控制（竖着的三个点）<br><img data-src="https://tu.sunpma.com/imgs/2021/01/f4e7104bfe4762d7.png" alt=""><br>点击更多工具并进入扩展程序<br><img data-src="https://tu.sunpma.com/imgs/2021/01/17a05f81538ff962.png" alt=""><br>点击左上角扩展程序并点击弹出的窗口下面的“打开Chrome网上商店”<br><img data-src="https://tu.sunpma.com/imgs/2021/01/f3265b52ed36e54c.png" alt=""><br><img data-src="https://tu.sunpma.com/imgs/2021/01/649074f270b6af0f.png" alt=""><br>在搜索框内搜索stylus<br><img data-src="https://tu.sunpma.com/imgs/2021/01/ab28eb144e5d21e1.png" alt=""><br>点击第一个并添加到Chrome</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly91c2Vyc3R5bGVzLm9yZy9zdHlsZXMvMTkxNjY1L2NvZGVmb3JjZXM=">下载codeforces美化脚本<i class="fa fa-external-link-alt"></i></span></p>
+<p>(可能会比较慢)</p>
+<p>脚本有一个开启/关闭顶栏动画可选。</p>
+<p>Customize Settings中选择turn off即可关闭顶栏动画。（顶栏动画为动态）</p>
+<p>这里还有个wusoj的美化脚本（wustoj是武汉科技大学的OJ）<br><span class="exturl" data-url="aHR0cHM6Ly91c2Vyc3R5bGVzLm9yZy9zdHlsZXMvMTkwNDcxL3d1c3Rvag==">wustoj美化脚本<i class="fa fa-external-link-alt"></i></span></p>
+<p>为了方便起见，可以固定该扩展<br><img data-src="https://tu.sunpma.com/imgs/2021/01/c86897a69b90d969.png" alt=""></p>
+<p>如果想取消某个网站的所有脚本<br><img data-src="https://tu.sunpma.com/imgs/2021/01/3614a2eda352e992.png" alt=""></p>
+<p>如果想更换脚本或者更新脚本请在管理样式界面操作。</p>
+]]></content>
+      <tags>
+        <tag>网站美化</tag>
       </tags>
   </entry>
   <entry>
@@ -704,6 +692,18 @@ dp[i][2]=dp[i-1][2],dp[i][3]=dp[i-1][3]</script><p>即不考虑当前字符时�
 ]]></content>
   </entry>
   <entry>
+    <title>二维hash</title>
+    <url>/%E4%BA%8C%E7%BB%B4hash/</url>
+    <content><![CDATA[<p>设sum[i][j]表示左上角为(1,1)，右下角为(i,j)的hash值，mod为模数。<br><a id="more"></a><br>则</p>
+<script type="math/tex; mode=display">sum[i][j]=(a[i][j]+sum[i-1][j-1]*base1*base2+sum[i-1][j]*base1+sum[i][j-1]*base2)\%mod</script><p>即可。<br>求左上角为(A,B)，右下角为(C,D)的hash值：</p>
+<script type="math/tex; mode=display">
+return (sum[C][D]+sum[A][B]*base1^{C-A}*base2^{D-B}-sum[A][D]*base1^{C-A}-sum[C][B]*base2^{D-B}+mod)\%mod;</script><p>和二维前缀和及其相似。<br>细节未处理，比如可能会溢出。<br>mod可以取1e9+7,base1和base2可以取孪生素数。</p>
+]]></content>
+      <tags>
+        <tag>hash</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>合并回文子串</title>
     <url>/%E5%90%88%E5%B9%B6%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</url>
     <content><![CDATA[<p>经典的回文串相关的 DP 题，理解了如何用$O(n^2)$求解回文串，这题会比较简单。</p>
@@ -724,18 +724,10 @@ dp[i][j][k][l]|=dp[i][j][k+1][l-1]\;(g[k]==g[l])
       </tags>
   </entry>
   <entry>
-    <title>失衡天平</title>
-    <url>/%E5%A4%B1%E8%A1%A1%E5%A4%A9%E5%B9%B3/</url>
-    <content><![CDATA[<h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给了 n 个武器，每个武器有一个重量 a ，并且给了一个天平，现在你每次都可以从这些武器中选择若干个武器并放到天平上，但是只有天平两边重量相差 m 以内你才能拿走，并且拿走的武器不能再放到天平上，问你最多能拿走的武器总重量。</p>
-<a id="more"></a>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>实际上如果答案最优，则拿若干次一定不优于拿一次。<br>假设拿的第一次左右两边相差 x ，第二次左右两边相差 y ，则一定有 $|x-y|\leq m$（第二次重的一边放到第一次轻的一边），所以其实无论拿多少次都可以变成只拿一次。<br/><br>这样就是个简单 dp 了。<br>设 $dp[i][j]$ 表示前 i 个武器天平重量相差 j 能拿走的最大武器重量<br/><br>转移：</p>
-<script type="math/tex; mode=display">
-dp[i][j]=max(dp[i-1][j],dp[i-1][j+a[i]],dp[i-1][|j-a[i]|])</script><p>参考代码如下：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">105</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">2</span>][N*N],a[N];<span class="comment">//dp[i][j]表示前i个左右两边相差j的最大重量</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> now=<span class="number">0</span>,las=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0xf3</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        now^=<span class="number">1</span>,las^=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">10000</span>;++j)&#123;</span><br><span class="line">            <span class="keyword">int</span> x;</span><br><span class="line">            x=<span class="built_in">abs</span>(j-a[i]);</span><br><span class="line">            dp[now][j]=dp[las][j];</span><br><span class="line">            dp[now][j]=max(dp[now][j],dp[las][x]+a[i]);</span><br><span class="line">            x=j+a[i];</span><br><span class="line">            <span class="keyword">if</span>(x&lt;=<span class="number">10000</span>)</span><br><span class="line">                dp[now][j]=max(dp[now][j],dp[las][x]+a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m;++i)</span><br><span class="line">        ans=max(ans,dp[now][i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>用了下滚动数组优化。</p>
+    <title>寒假学习计划</title>
+    <url>/%E5%AF%92%E5%81%87%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p>知识点：<br><a id="more"></a><br>1.线性基<br>2.最小斯坦纳树<br>3.bitset<br>4.点分治<br>5.边分治<br>6.莫比乌斯反演<br>7.杜教筛<br>8.DP<br>9.SAM<br>10.序列自动机<br>11.splay<br>12.替罪羊树<br>13.LCT<br>14.treap及可持久化<br>15.主席树<br>16.线段树合并<br>17.启发式合并<br>18.可撤销并查集<br>19.整体二分<br>20.2-SAT<br>21.欧拉回路<br>22.哈密顿回路<br>23.哈夫曼树<br>24.最大流最小割<br>25.次小生成树<br>26.k小生成树<br>27.差分约束<br>28.中国剩余定理<br>29.欧拉函数<br>30.欧几里得定理<br>31.扩展欧几里得<br>32.容斥原理<br>33.Ploya<br>34.Burnside<br>35.斯特林数<br>36.Min-25筛<br>37.凸包<br>38.半平面交<br>39.FFT<br>40.NTT<br>未完待续…</p>
 ]]></content>
-      <tags>
-        <tag>DP</tag>
-        <tag>牛客每日一题</tag>
-      </tags>
   </entry>
   <entry>
     <title>备忘录</title>
@@ -751,16 +743,6 @@ dp[i][j]=max(dp[i-1][j],dp[i-1][j+a[i]],dp[i-1][|j-a[i]|])</script><p>参考代�
 
 <h2 id="加密格式"><a href="#加密格式" class="headerlink" title="加密格式"></a>加密格式</h2><p>encrypt: true<br>enc_pwd: 密码</p>
 <h2 id="图片出现403"><a href="#图片出现403" class="headerlink" title="图片出现403"></a>图片出现403</h2><p>尝试在文章开头加上<br><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-referrer&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>嵌入b站视频</title>
-    <url>/%E5%B5%8C%E5%85%A5b%E7%AB%99%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<p>嵌入b站视频的方法<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;div style=<span class="string">&quot;position: relative; padding: 0% 0%;&quot;</span>&gt;</span><br><span class="line">&lt;iframe style=<span class="string">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span> src=<span class="string">&quot;//player.bilibili.com/player.html?aid=52516662&amp;bvid=BV1o4411E7xW&amp;cid=91907659&amp;page=1&amp;as_wide=1&amp;high_quality=1&amp;danmaku=1&quot;</span> scrolling=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> frameborder=<span class="string">&quot;no&quot;</span> framespacing=<span class="string">&quot;0&quot;</span> allowfullscreen=<span class="string">&quot;true&quot;</span>&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>效果如下</p>
-<div style="position: relative; padding: 0% 0%;">
-<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=52516662&bvid=BV1o4411E7xW&cid=91907659&page=1&as_wide=1&high_quality=1&danmaku=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-</div>
-
 ]]></content>
   </entry>
   <entry>
@@ -828,30 +810,28 @@ dp[i][j]=max(dp[i-1][j],dp[i-1][j+a[i]],dp[i-1][|j-a[i]|])</script><p>参考代�
 ]]></content>
   </entry>
   <entry>
-    <title>寒假学习计划</title>
-    <url>/%E5%AF%92%E5%81%87%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p>知识点：<br><a id="more"></a><br>1.线性基<br>2.最小斯坦纳树<br>3.bitset<br>4.点分治<br>5.边分治<br>6.莫比乌斯反演<br>7.杜教筛<br>8.DP<br>9.SAM<br>10.序列自动机<br>11.splay<br>12.替罪羊树<br>13.LCT<br>14.treap及可持久化<br>15.主席树<br>16.线段树合并<br>17.启发式合并<br>18.可撤销并查集<br>19.整体二分<br>20.2-SAT<br>21.欧拉回路<br>22.哈密顿回路<br>23.哈夫曼树<br>24.最大流最小割<br>25.次小生成树<br>26.k小生成树<br>27.差分约束<br>28.中国剩余定理<br>29.欧拉函数<br>30.欧几里得定理<br>31.扩展欧几里得<br>32.容斥原理<br>33.Ploya<br>34.Burnside<br>35.斯特林数<br>36.Min-25筛<br>37.凸包<br>38.半平面交<br>39.FFT<br>40.NTT<br>未完待续…</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>明日方舟抽卡概率计算</title>
-    <url>/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%8A%BD%E5%8D%A1%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/</url>
-    <content><![CDATA[<p>明日方舟抽卡概率计算。<br><a id="more"></a><br>我们定义$dp[i][j]$表示抽卡到第$j$次时出了第$i$次货的概率，则有</p>
+    <title>失衡天平</title>
+    <url>/%E5%A4%B1%E8%A1%A1%E5%A4%A9%E5%B9%B3/</url>
+    <content><![CDATA[<h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p>给了 n 个武器，每个武器有一个重量 a ，并且给了一个天平，现在你每次都可以从这些武器中选择若干个武器并放到天平上，但是只有天平两边重量相差 m 以内你才能拿走，并且拿走的武器不能再放到天平上，问你最多能拿走的武器总重量。</p>
+<a id="more"></a>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>实际上如果答案最优，则拿若干次一定不优于拿一次。<br>假设拿的第一次左右两边相差 x ，第二次左右两边相差 y ，则一定有 $|x-y|\leq m$（第二次重的一边放到第一次轻的一边），所以其实无论拿多少次都可以变成只拿一次。<br/><br>这样就是个简单 dp 了。<br>设 $dp[i][j]$ 表示前 i 个武器天平重量相差 j 能拿走的最大武器重量<br/><br>转移：</p>
 <script type="math/tex; mode=display">
-dp[i][j]=\sum_{k=i-1}^{j-1}{dp[i-1][k]*dp[1][j-k]}(i>1)</script><p>预处理$dp[1][i]$即可。</p>
-<p>上代码</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">double</span> dp[<span class="number">12</span>][N],s[N],f[N];</span><br><span class="line"><span class="comment">//dp[i][j]表示抽卡第j次时第i次出货的概率</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">double</span> p=<span class="number">0.02</span>,q=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i&gt;<span class="number">50</span>)</span><br><span class="line">            p+=<span class="number">0.02</span>;</span><br><span class="line">        dp[<span class="number">1</span>][i]=q*p;</span><br><span class="line">        q*=(<span class="number">1</span>-p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;第%d次时第一次出货的概率为%.10Lf\n&quot;</span>,i,dp[<span class="number">1</span>][i]);</span><br><span class="line">    <span class="comment">//这里均指第一次出货。</span></span><br><span class="line">    <span class="keyword">double</span> E_dp=<span class="number">0</span>;<span class="comment">//期望出货所需抽卡次数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)</span><br><span class="line">        E_dp+=i*dp[<span class="number">1</span>][i];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;期望出货一次所需抽卡次数:%.10Lf\n&quot;</span>,E_dp);</span><br><span class="line">    f[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)&#123;</span><br><span class="line">        s[i]=s[i<span class="number">-1</span>]+dp[<span class="number">1</span>][i];</span><br><span class="line">        f[i]=<span class="number">1</span>-s[i];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;出货一次&lt;=%d抽卡次数的概率%.10Lf\n&quot;</span>,i,s[i]);<span class="comment">//即dp[1][1]+...+dp[1][i]</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">10</span>;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">1000</span>;++j)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=i<span class="number">-1</span>;k&lt;j;++k)</span><br><span class="line">                dp[i][j]+=dp[i<span class="number">-1</span>][k]*dp[<span class="number">1</span>][j-k];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">double</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> X=<span class="number">700</span>,ans_id=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=X<span class="number">-100</span>;i&lt;=X;++i)&#123;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">double</span> z_ans=dp[<span class="number">10</span>][i]*f[X-i];</span><br><span class="line">        <span class="keyword">if</span>(z_ans&gt;ans)&#123;</span><br><span class="line">            ans=z_ans;</span><br><span class="line">            ans_id=i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;当第%d次出货第10次且总抽卡次数为%d时的最大概率为%.14Lf\n&quot;</span>,ans_id,X,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注：上面代码的q指的是前面均为出货的概率，p代表当前出货率。</p>
-<p>接下来我们对此进行分析。<br>代码运行结果显示，期望出货抽卡次数为35次。<br>35次内出货概率约为50%，50次内出货概率约为63.5%，70次内出货概率99.84%，88次内<strong>不出货</strong>概率约为$ 2*10^{-8}\\%$</p>
-<p>这是什么概念呢？</p>
-<p>十连中出五个六星的概率是$0.02^{5}*0.98 ^{5} * C(10,5)$约为$7*10^{-5} \\% $</p>
-<p>好家伙，你88次还不出货的概率比十连中出五星概率小几千倍。<br>接下来考虑平均出货。<br>有的人说自己80级平均70次出一个六星？<br>我们假设他抽了700次10个六星吧，设这个概率最大为$ans$，则有</p>
-<script type="math/tex; mode=display">
-ans=max\{dp[10][i]*f[700-i]\}(600\leq i\leq 700,其中f[i]表示i发不出的概率)</script><p>我们可以得到当第640次出第10次且后60次不出货的概率是最大的，即700次平均70次1六星的最大概率，其约为$9.15*10^{-10}\\%$<br><br>当然，这只是700次出了10次的概率，如果是出了&lt;=10次的概率求到的仍约为$9.15*10^{-10}\\%$，因为&lt;=9次的远小于=10次的<br><br>这个概率极其的小，比十连出五个六星概率小的多得多，然而我们总是能看到说自己什么90发出货，什么高等级平均70次一个之类的，却很少见到有十连四个，五个六星的，这原因相信不说也应该懂了吧…<br><br>且根据期望的相关性质，出货k次的期望抽卡次数为35*k。<br>如有错误，请留言指出！</p>
+dp[i][j]=max(dp[i-1][j],dp[i-1][j+a[i]],dp[i-1][|j-a[i]|])</script><p>参考代码如下：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">105</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">2</span>][N*N],a[N];<span class="comment">//dp[i][j]表示前i个左右两边相差j的最大重量</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> now=<span class="number">0</span>,las=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">memset</span>(dp,<span class="number">0xf3</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        now^=<span class="number">1</span>,las^=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=<span class="number">10000</span>;++j)&#123;</span><br><span class="line">            <span class="keyword">int</span> x;</span><br><span class="line">            x=<span class="built_in">abs</span>(j-a[i]);</span><br><span class="line">            dp[now][j]=dp[las][j];</span><br><span class="line">            dp[now][j]=max(dp[now][j],dp[las][x]+a[i]);</span><br><span class="line">            x=j+a[i];</span><br><span class="line">            <span class="keyword">if</span>(x&lt;=<span class="number">10000</span>)</span><br><span class="line">                dp[now][j]=max(dp[now][j],dp[las][x]+a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m;++i)</span><br><span class="line">        ans=max(ans,dp[now][i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>用了下滚动数组优化。</p>
 ]]></content>
       <tags>
-        <tag>明日方舟</tag>
+        <tag>DP</tag>
+        <tag>牛客每日一题</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>嵌入b站视频</title>
+    <url>/%E5%B5%8C%E5%85%A5b%E7%AB%99%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>嵌入b站视频的方法<br><a id="more"></a><br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;div style=<span class="string">&quot;position: relative; padding: 0% 0%;&quot;</span>&gt;</span><br><span class="line">&lt;iframe style=<span class="string">&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;</span> src=<span class="string">&quot;//player.bilibili.com/player.html?aid=52516662&amp;bvid=BV1o4411E7xW&amp;cid=91907659&amp;page=1&amp;as_wide=1&amp;high_quality=1&amp;danmaku=1&quot;</span> scrolling=<span class="string">&quot;no&quot;</span> border=<span class="string">&quot;0&quot;</span> frameborder=<span class="string">&quot;no&quot;</span> framespacing=<span class="string">&quot;0&quot;</span> allowfullscreen=<span class="string">&quot;true&quot;</span>&gt;&lt;/iframe&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>效果如下</p>
+<div style="position: relative; padding: 0% 0%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=52516662&bvid=BV1o4411E7xW&cid=91907659&page=1&as_wide=1&high_quality=1&danmaku=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+]]></content>
   </entry>
   <entry>
     <title>最小斯坦纳树详解</title>
@@ -916,16 +896,23 @@ ans=max\{dp[10][i]*f[700-i]\}(600\leq i\leq 700,其中f[i]表示i发不出的概
       </tags>
   </entry>
   <entry>
-    <title>NC18386字符串</title>
-    <url>/%E7%89%9B%E5%AE%A2-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<p>基础中的基础题。</p>
-<h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL3Byb2JsZW0vMTgzODY=">题目链接<i class="fa fa-external-link-alt"></i></span><br>给出一个长度为 n 的仅由小写字母构成的字符串，求出包含了所有的小写字母子串的最小长度。</p>
-<a id="more"></a>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>很显然是用尺取法<br>对于每一个右端点，求出最大的左端点并且能满足条件即可，这样的话，当右端点往右移动时，显然这样的左端点也是往右移动的<br>对于快速求出是否符合条件只需要用桶存每个字母出现次数即可，每次移动右端点后，将左端点移动到最后一个使得所有字母都出现过的位置，这个位置也是第一个至少一个字母未出现的位置的左边一个。</p>
-<p>参考代码如下：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">char</span> s[N];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> num[<span class="number">30</span>],res;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(++num[s[x]-<span class="string">&#x27;a&#x27;</span>]==<span class="number">1</span>)--res;</span><br><span class="line">&#125;<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(--num[s[x]-<span class="string">&#x27;a&#x27;</span>]==<span class="number">0</span>)++res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    res=<span class="number">26</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> L=<span class="number">1</span>,R=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> ans=n+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (R &lt;= n) &#123;</span><br><span class="line">        <span class="keyword">while</span>(R&lt;=n&amp;&amp;res)add(++R);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;n)<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">while</span>(!res)del(L++);</span><br><span class="line">        ans=min(ans,R-L+<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <title>明日方舟抽卡概率计算</title>
+    <url>/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%8A%BD%E5%8D%A1%E6%A6%82%E7%8E%87%E8%AE%A1%E7%AE%97/</url>
+    <content><![CDATA[<p>明日方舟抽卡概率计算。<br><a id="more"></a><br>我们定义$dp[i][j]$表示抽卡到第$j$次时出了第$i$次货的概率，则有</p>
+<script type="math/tex; mode=display">
+dp[i][j]=\sum_{k=i-1}^{j-1}{dp[i-1][k]*dp[1][j-k]}(i>1)</script><p>预处理$dp[1][i]$即可。</p>
+<p>上代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1010</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">double</span> dp[<span class="number">12</span>][N],s[N],f[N];</span><br><span class="line"><span class="comment">//dp[i][j]表示抽卡第j次时第i次出货的概率</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">double</span> p=<span class="number">0.02</span>,q=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i&gt;<span class="number">50</span>)</span><br><span class="line">            p+=<span class="number">0.02</span>;</span><br><span class="line">        dp[<span class="number">1</span>][i]=q*p;</span><br><span class="line">        q*=(<span class="number">1</span>-p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;第%d次时第一次出货的概率为%.10Lf\n&quot;</span>,i,dp[<span class="number">1</span>][i]);</span><br><span class="line">    <span class="comment">//这里均指第一次出货。</span></span><br><span class="line">    <span class="keyword">double</span> E_dp=<span class="number">0</span>;<span class="comment">//期望出货所需抽卡次数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)</span><br><span class="line">        E_dp+=i*dp[<span class="number">1</span>][i];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;期望出货一次所需抽卡次数:%.10Lf\n&quot;</span>,E_dp);</span><br><span class="line">    f[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;++i)&#123;</span><br><span class="line">        s[i]=s[i<span class="number">-1</span>]+dp[<span class="number">1</span>][i];</span><br><span class="line">        f[i]=<span class="number">1</span>-s[i];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;出货一次&lt;=%d抽卡次数的概率%.10Lf\n&quot;</span>,i,s[i]);<span class="comment">//即dp[1][1]+...+dp[1][i]</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=<span class="number">10</span>;++i)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">1000</span>;++j)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k=i<span class="number">-1</span>;k&lt;j;++k)</span><br><span class="line">                dp[i][j]+=dp[i<span class="number">-1</span>][k]*dp[<span class="number">1</span>][j-k];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">double</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> X=<span class="number">700</span>,ans_id=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=X<span class="number">-100</span>;i&lt;=X;++i)&#123;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">double</span> z_ans=dp[<span class="number">10</span>][i]*f[X-i];</span><br><span class="line">        <span class="keyword">if</span>(z_ans&gt;ans)&#123;</span><br><span class="line">            ans=z_ans;</span><br><span class="line">            ans_id=i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;当第%d次出货第10次且总抽卡次数为%d时的最大概率为%.14Lf\n&quot;</span>,ans_id,X,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注：上面代码的q指的是前面均为出货的概率，p代表当前出货率。</p>
+<p>接下来我们对此进行分析。<br>代码运行结果显示，期望出货抽卡次数为35次。<br>35次内出货概率约为50%，50次内出货概率约为63.5%，70次内出货概率99.84%，88次内<strong>不出货</strong>概率约为$ 2*10^{-8}\\%$</p>
+<p>这是什么概念呢？</p>
+<p>十连中出五个六星的概率是$0.02^{5}*0.98 ^{5} * C(10,5)$约为$7*10^{-5} \\% $</p>
+<p>好家伙，你88次还不出货的概率比十连中出五星概率小几千倍。<br>接下来考虑平均出货。<br>有的人说自己80级平均70次出一个六星？<br>我们假设他抽了700次10个六星吧，设这个概率最大为$ans$，则有</p>
+<script type="math/tex; mode=display">
+ans=max\{dp[10][i]*f[700-i]\}(600\leq i\leq 700,其中f[i]表示i发不出的概率)</script><p>我们可以得到当第640次出第10次且后60次不出货的概率是最大的，即700次平均70次1六星的最大概率，其约为$9.15*10^{-10}\\%$<br><br>当然，这只是700次出了10次的概率，如果是出了&lt;=10次的概率求到的仍约为$9.15*10^{-10}\\%$，因为&lt;=9次的远小于=10次的<br><br>这个概率极其的小，比十连出五个六星概率小的多得多，然而我们总是能看到说自己什么90发出货，什么高等级平均70次一个之类的，却很少见到有十连四个，五个六星的，这原因相信不说也应该懂了吧…<br><br>且根据期望的相关性质，出货k次的期望抽卡次数为35*k。<br>如有错误，请留言指出！</p>
 ]]></content>
       <tags>
-        <tag>尺取法</tag>
+        <tag>明日方舟</tag>
       </tags>
   </entry>
   <entry>
@@ -962,6 +949,42 @@ ans=max\{dp[10][i]*f[700-i]\}(600\leq i\leq 700,其中f[i]表示i发不出的概
 ]]></content>
       <tags>
         <tag>线性基</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NC18386字符串</title>
+    <url>/%E7%89%9B%E5%AE%A2-%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<p>基础中的基础题。</p>
+<h2 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h2><p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL3Byb2JsZW0vMTgzODY=">题目链接<i class="fa fa-external-link-alt"></i></span><br>给出一个长度为 n 的仅由小写字母构成的字符串，求出包含了所有的小写字母子串的最小长度。</p>
+<a id="more"></a>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>很显然是用尺取法<br>对于每一个右端点，求出最大的左端点并且能满足条件即可，这样的话，当右端点往右移动时，显然这样的左端点也是往右移动的<br>对于快速求出是否符合条件只需要用桶存每个字母出现次数即可，每次移动右端点后，将左端点移动到最后一个使得所有字母都出现过的位置，这个位置也是第一个至少一个字母未出现的位置的左边一个。</p>
+<p>参考代码如下：<br><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">char</span> s[N];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> num[<span class="number">30</span>],res;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(++num[s[x]-<span class="string">&#x27;a&#x27;</span>]==<span class="number">1</span>)--res;</span><br><span class="line">&#125;<span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(--num[s[x]-<span class="string">&#x27;a&#x27;</span>]==<span class="number">0</span>)++res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    res=<span class="number">26</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> n=<span class="built_in">strlen</span>(s+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> L=<span class="number">1</span>,R=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> ans=n+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (R &lt;= n) &#123;</span><br><span class="line">        <span class="keyword">while</span>(R&lt;=n&amp;&amp;res)add(++R);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;n)<span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">while</span>(!res)del(L++);</span><br><span class="line">        ans=min(ans,R-L+<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>尺取法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>牛客挑战赛46C-排列</title>
+    <url>/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B46C-%E6%8E%92%E5%88%97/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL2NvbnRlc3QvOTUxMC9D">题目链接<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+<p>题目描述：<br>有个1$\sim$n的随机排列的数组，且其含k个超级逆序对，问你能猜对该数组的概率是多少。</p>
+<p>数据范围：<br>$n,k\leq 500$</p>
+<p>题解：<br>一道DP题，不算难。<br>考虑设$dp[i][j][p]$为$1\sim i$，且i在第p位，有j个超级逆序对的方案数。<br>则若加入i，除了i-1，其余的只要在i后均能形成超级逆序对，且不存在在i前与i形成超级逆序对的。<br>考虑将i插入到$1\sim i-1$的不同位置，并且讨论和i-1的先后顺序即可。</p>
+<ul>
+<li>如果i-1在p后，则方案数为$\sum_{l=p}^{l=i-1}{dp[i-1][j-i+p+1][l]}$</li>
+<li>如果i-1在p前，则方案数为$\sum_{l=1}^{l=p-1}{dp[i-1][j-i+p][l]}$</li>
+</ul>
+<p>即$dp[i][j][p]=\sum_{l=p}^{l=i-1}{dp[i-1][j-i+p+1][l]}+\sum_{l=1}^{l=p-1}{dp[i-1][j-i+p][l]}$<br/><br>下面上代码</p>
+<details>
+    <summary>参考代码</summary>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">505</span>,mod=<span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">2</span>][N][N],s[<span class="number">2</span>][N][N];</span><br><span class="line"><span class="keyword">int</span> n,k;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> a+b&gt;=mod?a+b-mod:a+b;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> a&lt;b?a-b+mod:a-b;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> a*<span class="number">1ll</span>*b%mod;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)s=mul(s,a);</span><br><span class="line">        a=mul(a,a);</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;k);</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    s[<span class="number">0</span>][<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> now=<span class="number">0</span>,las=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        swap(now,las);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=k;++j)&#123;</span><br><span class="line">             <span class="keyword">for</span>(<span class="keyword">int</span> p=<span class="number">1</span>;p&lt;=i;++p)&#123;</span><br><span class="line">                 dp[now][j][p]=<span class="number">0</span>;</span><br><span class="line">                 <span class="keyword">if</span>(j-i+p+<span class="number">1</span>&gt;=<span class="number">0</span>)dp[now][j][p]=del(s[las][j-i+p+<span class="number">1</span>][i<span class="number">-1</span>],s[las][j-i+p+<span class="number">1</span>][p<span class="number">-1</span>]);</span><br><span class="line">                 <span class="keyword">if</span>(j-i+p&gt;=<span class="number">0</span>)dp[now][j][p]=add(dp[now][j][p],s[las][j-i+p][p<span class="number">-1</span>]);</span><br><span class="line">                 s[now][j][p]=add(s[now][j][p<span class="number">-1</span>],dp[now][j][p]);</span><br><span class="line">             &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)ans=add(ans,dp[now][k][i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,qpow(ans,mod<span class="number">-2</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+]]></content>
+      <tags>
+        <tag>DP</tag>
       </tags>
   </entry>
   <entry>
@@ -1016,29 +1039,6 @@ ans=max\{dp[10][i]*f[700-i]\}(600\leq i\leq 700,其中f[i]表示i发不出的概
       </tags>
   </entry>
   <entry>
-    <title>牛客挑战赛46C-排列</title>
-    <url>/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B46C-%E6%8E%92%E5%88%97/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL2NvbnRlc3QvOTUxMC9D">题目链接<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a>
-<p>题目描述：<br>有个1$\sim$n的随机排列的数组，且其含k个超级逆序对，问你能猜对该数组的概率是多少。</p>
-<p>数据范围：<br>$n,k\leq 500$</p>
-<p>题解：<br>一道DP题，不算难。<br>考虑设$dp[i][j][p]$为$1\sim i$，且i在第p位，有j个超级逆序对的方案数。<br>则若加入i，除了i-1，其余的只要在i后均能形成超级逆序对，且不存在在i前与i形成超级逆序对的。<br>考虑将i插入到$1\sim i-1$的不同位置，并且讨论和i-1的先后顺序即可。</p>
-<ul>
-<li>如果i-1在p后，则方案数为$\sum_{l=p}^{l=i-1}{dp[i-1][j-i+p+1][l]}$</li>
-<li>如果i-1在p前，则方案数为$\sum_{l=1}^{l=p-1}{dp[i-1][j-i+p][l]}$</li>
-</ul>
-<p>即$dp[i][j][p]=\sum_{l=p}^{l=i-1}{dp[i-1][j-i+p+1][l]}+\sum_{l=1}^{l=p-1}{dp[i-1][j-i+p][l]}$<br/><br>下面上代码</p>
-<details>
-    <summary>参考代码</summary>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">505</span>,mod=<span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">2</span>][N][N],s[<span class="number">2</span>][N][N];</span><br><span class="line"><span class="keyword">int</span> n,k;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> a+b&gt;=mod?a+b-mod:a+b;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">del</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> a&lt;b?a-b+mod:a-b;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;<span class="keyword">return</span> a*<span class="number">1ll</span>*b%mod;&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">qpow</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)s=mul(s,a);</span><br><span class="line">        a=mul(a,a);</span><br><span class="line">        b&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;k);</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    s[<span class="number">0</span>][<span class="number">0</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> now=<span class="number">0</span>,las=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        swap(now,las);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=k;++j)&#123;</span><br><span class="line">             <span class="keyword">for</span>(<span class="keyword">int</span> p=<span class="number">1</span>;p&lt;=i;++p)&#123;</span><br><span class="line">                 dp[now][j][p]=<span class="number">0</span>;</span><br><span class="line">                 <span class="keyword">if</span>(j-i+p+<span class="number">1</span>&gt;=<span class="number">0</span>)dp[now][j][p]=del(s[las][j-i+p+<span class="number">1</span>][i<span class="number">-1</span>],s[las][j-i+p+<span class="number">1</span>][p<span class="number">-1</span>]);</span><br><span class="line">                 <span class="keyword">if</span>(j-i+p&gt;=<span class="number">0</span>)dp[now][j][p]=add(dp[now][j][p],s[las][j-i+p][p<span class="number">-1</span>]);</span><br><span class="line">                 s[now][j][p]=add(s[now][j][p<span class="number">-1</span>],dp[now][j][p]);</span><br><span class="line">             &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)ans=add(ans,dp[now][k][i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,qpow(ans,mod<span class="number">-2</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</details>
-
-]]></content>
-      <tags>
-        <tag>DP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>牛客挑战赛47E.路径</title>
     <url>/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B47E-%E8%B7%AF%E5%BE%84/</url>
     <content><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一棵树，求所有经过点数大于等于2的无向路径中长度第k小的。</p>
@@ -1051,24 +1051,6 @@ ans[i]=\sum_{j=0}^{i}a[j]*b[i-j]</script><p>然后将当前处理子树合并到
       <tags>
         <tag>FFT</tag>
         <tag>点分治</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>牛客挑战赛76D.魔物消灭计划</title>
-    <url>/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B76D-%E9%AD%94%E7%89%A9%E6%B6%88%E7%81%AD%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL2NvbnRlc3QvMTA4NDUvRA==">题目链接<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a>
-<p>这题其实就是最小斯坦纳树的模板题…<br>真的，只要会最小斯坦纳树，这题基本秒解。<br>将所有相同宝石当做一个点，然后将x,y也算作必选即可。<br>之后就是套最小斯坦纳树模板了。<br>不过其实也可以不用这样啦，直接将所有相同宝石的点连一个对应宝石的新增点，边权为0，然后初始化的时候，第i个点如果宝石种类是p，令f[i][1&lt;&lt;(p-1)]=0即可。</p>
-<details>
-    <summary>参考代码</summary>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">120</span>,M=<span class="number">1</span>&lt;&lt;<span class="number">10</span>,inf=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> d[N],nxt[M+<span class="number">2</span>*N],to[M+<span class="number">2</span>*N],cost[M+<span class="number">2</span>*N],tot;</span><br><span class="line"><span class="keyword">int</span> n,m,k;</span><br><span class="line"><span class="keyword">int</span> x,y,cnt;</span><br><span class="line"><span class="keyword">int</span> f[N][M],dis[N];</span><br><span class="line"><span class="keyword">bool</span> in[N];</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    to[++tot]=b;</span><br><span class="line">    nxt[tot]=d[a];</span><br><span class="line">    d[a]=tot;</span><br><span class="line">    cost[tot]=c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> S)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        dis[i]=f[i][S];</span><br><span class="line">        <span class="keyword">if</span>(dis[i]&lt;inf)q.push(i),in[i]=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        <span class="keyword">int</span> x=q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        in[x]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=d[x];i;i=nxt[i])&#123;</span><br><span class="line">            <span class="keyword">int</span> u=to[i];</span><br><span class="line">            <span class="keyword">if</span>(dis[u]&gt;dis[x]+cost[i])&#123;</span><br><span class="line">                dis[u]=dis[x]+cost[i];</span><br><span class="line">                <span class="keyword">if</span>(!in[u])in[u]=<span class="number">1</span>,q.push(u);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)f[i][S]=dis[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Stenier</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cnt=<span class="number">1</span>&lt;&lt;(k+<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)f[i][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> S=<span class="number">0</span>;S&lt;cnt;++S)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> T=S&amp;(S<span class="number">-1</span>);T;T=(T<span class="number">-1</span>)&amp;S)</span><br><span class="line">                f[i][S]=min(f[i][S],f[i][T]+f[i][S^T]);</span><br><span class="line">        spfa(S);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d%d&quot;</span>,&amp;n,&amp;m,&amp;k,&amp;x,&amp;y);</span><br><span class="line">    <span class="built_in">memset</span>(f,<span class="number">0x3f</span>,<span class="keyword">sizeof</span>(f));</span><br><span class="line">    <span class="keyword">int</span> p;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;p);</span><br><span class="line">        <span class="keyword">if</span>(i==x)f[i][<span class="number">1</span>&lt;&lt;k]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i==y)f[i][<span class="number">1</span>&lt;&lt;(k+<span class="number">1</span>)]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!p)<span class="keyword">continue</span>;</span><br><span class="line">            f[i][<span class="number">1</span>&lt;&lt;(p<span class="number">-1</span>)]=<span class="number">0</span>;</span><br><span class="line">            ins(i,n+p,<span class="number">0</span>);</span><br><span class="line">            ins(n+p,i,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;n+=k;</span><br><span class="line">    <span class="keyword">int</span> u,v,w;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;u,&amp;v,&amp;w);</span><br><span class="line">        <span class="keyword">if</span>(u==v)<span class="keyword">continue</span>;</span><br><span class="line">        ins(u,v,w),ins(v,u,w);</span><br><span class="line">    &#125;</span><br><span class="line">    Stenier();</span><br><span class="line">    <span class="keyword">int</span> ans=inf;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)ans=min(ans,f[i][cnt<span class="number">-1</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</details>
-
-
-<p>感觉这样子的话如果去掉相同宝石可以传送，然后去掉建额外边，好像也是可以的？<br>因为其实求最小斯坦纳树除了初始化之外，之后与那k个点无关了。</p>
-]]></content>
-      <tags>
-        <tag>最小斯坦纳树</tag>
       </tags>
   </entry>
   <entry>
@@ -1093,14 +1075,21 @@ ans[i]=\sum_{j=0}^{i}a[j]*b[i-j]</script><p>然后将当前处理子树合并到
       </tags>
   </entry>
   <entry>
-    <title>牛客每日一题</title>
-    <url>/%E7%89%9B%E5%AE%A2%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
-    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vZGlzY3Vzcy80MzYyNTM/dHlwZT0xMDEmYW1wO29yZGVyPTAmYW1wO3Bvcz0xJmFtcDtwYWdlPTImYW1wO2NoYW5uZWw9LTEmYW1wO3NvdXJjZV9pZD0x">原文链接<i class="fa fa-external-link-alt"></i></span></p>
-<p>题解的话牛客上也有很多，我的博客也写了一些。</p>
-<p>要找到对应的题解，可以在标签找”牛客每日一题”，或者直接搜索对应的题目名字。</p>
-<a id="more"></a>]]></content>
+    <title>牛客挑战赛76D.魔物消灭计划</title>
+    <url>/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B76D-%E9%AD%94%E7%89%A9%E6%B6%88%E7%81%AD%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vYWNtL2NvbnRlc3QvMTA4NDUvRA==">题目链接<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+<p>这题其实就是最小斯坦纳树的模板题…<br>真的，只要会最小斯坦纳树，这题基本秒解。<br>将所有相同宝石当做一个点，然后将x,y也算作必选即可。<br>之后就是套最小斯坦纳树模板了。<br>不过其实也可以不用这样啦，直接将所有相同宝石的点连一个对应宝石的新增点，边权为0，然后初始化的时候，第i个点如果宝石种类是p，令f[i][1&lt;&lt;(p-1)]=0即可。</p>
+<details>
+    <summary>参考代码</summary>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">120</span>,M=<span class="number">1</span>&lt;&lt;<span class="number">10</span>,inf=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> d[N],nxt[M+<span class="number">2</span>*N],to[M+<span class="number">2</span>*N],cost[M+<span class="number">2</span>*N],tot;</span><br><span class="line"><span class="keyword">int</span> n,m,k;</span><br><span class="line"><span class="keyword">int</span> x,y,cnt;</span><br><span class="line"><span class="keyword">int</span> f[N][M],dis[N];</span><br><span class="line"><span class="keyword">bool</span> in[N];</span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">ins</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    to[++tot]=b;</span><br><span class="line">    nxt[tot]=d[a];</span><br><span class="line">    d[a]=tot;</span><br><span class="line">    cost[tot]=c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> S)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        dis[i]=f[i][S];</span><br><span class="line">        <span class="keyword">if</span>(dis[i]&lt;inf)q.push(i),in[i]=<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">        <span class="keyword">int</span> x=q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        in[x]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=d[x];i;i=nxt[i])&#123;</span><br><span class="line">            <span class="keyword">int</span> u=to[i];</span><br><span class="line">            <span class="keyword">if</span>(dis[u]&gt;dis[x]+cost[i])&#123;</span><br><span class="line">                dis[u]=dis[x]+cost[i];</span><br><span class="line">                <span class="keyword">if</span>(!in[u])in[u]=<span class="number">1</span>,q.push(u);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)f[i][S]=dis[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">Stenier</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cnt=<span class="number">1</span>&lt;&lt;(k+<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)f[i][<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> S=<span class="number">0</span>;S&lt;cnt;++S)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> T=S&amp;(S<span class="number">-1</span>);T;T=(T<span class="number">-1</span>)&amp;S)</span><br><span class="line">                f[i][S]=min(f[i][S],f[i][T]+f[i][S^T]);</span><br><span class="line">        spfa(S);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d%d%d&quot;</span>,&amp;n,&amp;m,&amp;k,&amp;x,&amp;y);</span><br><span class="line">    <span class="built_in">memset</span>(f,<span class="number">0x3f</span>,<span class="keyword">sizeof</span>(f));</span><br><span class="line">    <span class="keyword">int</span> p;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;p);</span><br><span class="line">        <span class="keyword">if</span>(i==x)f[i][<span class="number">1</span>&lt;&lt;k]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i==y)f[i][<span class="number">1</span>&lt;&lt;(k+<span class="number">1</span>)]=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(!p)<span class="keyword">continue</span>;</span><br><span class="line">            f[i][<span class="number">1</span>&lt;&lt;(p<span class="number">-1</span>)]=<span class="number">0</span>;</span><br><span class="line">            ins(i,n+p,<span class="number">0</span>);</span><br><span class="line">            ins(n+p,i,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;n+=k;</span><br><span class="line">    <span class="keyword">int</span> u,v,w;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;++i)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;u,&amp;v,&amp;w);</span><br><span class="line">        <span class="keyword">if</span>(u==v)<span class="keyword">continue</span>;</span><br><span class="line">        ins(u,v,w),ins(v,u,w);</span><br><span class="line">    &#125;</span><br><span class="line">    Stenier();</span><br><span class="line">    <span class="keyword">int</span> ans=inf;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)ans=min(ans,f[i][cnt<span class="number">-1</span>]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+
+<p>感觉这样子的话如果去掉相同宝石可以传送，然后去掉建额外边，好像也是可以的？<br>因为其实求最小斯坦纳树除了初始化之外，之后与那k个点无关了。</p>
+]]></content>
       <tags>
-        <tag>牛客每日一题</tag>
+        <tag>最小斯坦纳树</tag>
       </tags>
   </entry>
   <entry>
@@ -1128,6 +1117,17 @@ ans[i]=\sum_{j=0}^{i}a[j]*b[i-j]</script><p>然后将当前处理子树合并到
 </li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>牛客每日一题</title>
+    <url>/%E7%89%9B%E5%AE%A2%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/</url>
+    <content><![CDATA[<p><span class="exturl" data-url="aHR0cHM6Ly9hYy5ub3djb2Rlci5jb20vZGlzY3Vzcy80MzYyNTM/dHlwZT0xMDEmYW1wO29yZGVyPTAmYW1wO3Bvcz0xJmFtcDtwYWdlPTImYW1wO2NoYW5uZWw9LTEmYW1wO3NvdXJjZV9pZD0x">原文链接<i class="fa fa-external-link-alt"></i></span></p>
+<p>题解的话牛客上也有很多，我的博客也写了一些。</p>
+<p>要找到对应的题解，可以在标签找”牛客每日一题”，或者直接搜索对应的题目名字。</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>牛客每日一题</tag>
+      </tags>
   </entry>
   <entry>
     <title>线形基详解</title>
