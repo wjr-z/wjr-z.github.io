@@ -354,6 +354,20 @@
   </url>
   
   <url>
+    <loc>https://wjr-z.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    <lastmod>2021-02-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjr-z.com/tags/KMP/</loc>
+    <lastmod>2021-02-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wjr-z.com/tags/DP/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
@@ -375,28 +389,7 @@
   </url>
   
   <url>
-    <loc>https://wjr-z.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wjr-z.com/tags/KMP/</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wjr-z.com/tags/%E6%9C%80%E5%B0%8F%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91/</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wjr-z.com/tags/%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -411,6 +404,13 @@
   
   <url>
     <loc>https://wjr-z.com/tags/%E8%B4%AA%E5%BF%83/</loc>
+    <lastmod>2021-02-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjr-z.com/tags/%E7%BD%91%E7%AB%99%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -438,14 +438,14 @@
   </url>
   
   <url>
-    <loc>https://wjr-z.com/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/</loc>
+    <loc>https://wjr-z.com/tags/%E5%B0%BA%E5%8F%96%E6%B3%95/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wjr-z.com/tags/%E5%B0%BA%E5%8F%96%E6%B3%95/</loc>
+    <loc>https://wjr-z.com/tags/%E7%BA%BF%E6%80%A7%E5%9F%BA/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -487,13 +487,6 @@
   </url>
   
   <url>
-    <loc>https://wjr-z.com/tags/%E7%BA%BF%E6%80%A7%E7%AD%9B/</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wjr-z.com/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
@@ -502,6 +495,13 @@
   
   <url>
     <loc>https://wjr-z.com/tags/%E4%BA%8C%E5%88%86/</loc>
+    <lastmod>2021-02-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wjr-z.com/tags/%E7%BA%BF%E6%80%A7%E7%AD%9B/</loc>
     <lastmod>2021-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
