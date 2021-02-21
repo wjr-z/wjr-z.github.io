@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://wjr-z.com/%E5%B7%B2%E5%AD%A6%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/FFT/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/Minimum%20Steiner%20tree/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/KMP/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/Linear%20basis/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/SAM/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/Linear%20sieve/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/%E5%B7%B2%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
+    <loc>https://wjr-z.com/%E5%9F%8E%E5%B8%82%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2021-02-20</lastmod>
+  </url>
+  <url>
     <loc>https://wjr-z.com/CodeforcesR703/</loc>
     <lastmod>2021-02-19</lastmod>
   </url>
@@ -49,14 +85,6 @@
     <lastmod>2021-01-27</lastmod>
   </url>
   <url>
-    <loc>https://wjr-z.com/%E7%BA%BF%E6%80%A7%E7%AD%9B%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2021-01-27</lastmod>
-  </url>
-  <url>
-    <loc>https://wjr-z.com/FFT%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2021-01-26</lastmod>
-  </url>
-  <url>
     <loc>https://wjr-z.com/%E7%89%9B%E5%AE%A2%E7%BB%83%E4%B9%A0%E8%B5%9B76/</loc>
     <lastmod>2021-01-26</lastmod>
   </url>
@@ -77,10 +105,6 @@
     <lastmod>2021-01-22</lastmod>
   </url>
   <url>
-    <loc>https://wjr-z.com/SAM%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2021-01-22</lastmod>
-  </url>
-  <url>
     <loc>https://wjr-z.com/codeforcesECR99/</loc>
     <lastmod>2021-01-22</lastmod>
   </url>
@@ -97,10 +121,6 @@
     <lastmod>2021-01-22</lastmod>
   </url>
   <url>
-    <loc>https://wjr-z.com/%E7%BA%BF%E5%BD%A2%E5%9F%BA%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2021-01-21</lastmod>
-  </url>
-  <url>
     <loc>https://wjr-z.com/%E6%B4%9B%E8%B0%B7P4151%E6%9C%80%E5%A4%A7XOR%E8%B7%AF%E5%BE%84/</loc>
     <lastmod>2021-01-20</lastmod>
   </url>
@@ -113,15 +133,7 @@
     <lastmod>2021-01-19</lastmod>
   </url>
   <url>
-    <loc>https://wjr-z.com/KMP%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2021-01-18</lastmod>
-  </url>
-  <url>
     <loc>https://wjr-z.com/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B76D-%E9%AD%94%E7%89%A9%E6%B6%88%E7%81%AD%E8%AE%A1%E5%88%92/</loc>
-    <lastmod>2021-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://wjr-z.com/%E6%9C%80%E5%B0%8F%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2021-01-17</lastmod>
   </url>
   <url>
