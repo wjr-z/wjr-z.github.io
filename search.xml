@@ -986,13 +986,13 @@ f(n)=\sum_{n|d}\mu(\frac{d}{n})F(d)</script></li>
     <url>/%E5%B7%B2%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<h2 id="已学知识点："><a href="#已学知识点：" class="headerlink" title="已学知识点："></a>已学知识点：</h2><h3 id="本博客内写过讲解的："><a href="#本博客内写过讲解的：" class="headerlink" title="本博客内写过讲解的："></a>本博客内写过讲解的：</h3><a id="more"></a>
 <ul>
-<li><a href="https://wjr-z.com/%E7%BA%BF%E5%BD%A2%E5%9F%BA%E8%AF%A6%E8%A7%A3/">线性基</a></li>
-<li><a href="https://wjr-z.com/%E7%BA%BF%E6%80%A7%E7%AD%9B%E8%AF%A6%E8%A7%A3/">线性筛</a></li>
-<li><a href="https://wjr-z.com/KMP%E8%AF%A6%E8%A7%A3/">KMP</a></li>
-<li><a href="https://wjr-z.com/SAM%E8%AF%A6%E8%A7%A3/">SAM</a></li>
-<li><a href="https://wjr-z.com/FFT%E8%AF%A6%E8%A7%A3/">FFT</a></li>
-<li><a href="https://wjr-z.com/%E6%9C%80%E5%B0%8F%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91%E8%AF%A6%E8%A7%A3/">最小斯坦纳树</a></li>
-<li>[莫比乌斯反演]<h3 id="本博客内尚未写过讲解的（待填坑）："><a href="#本博客内尚未写过讲解的（待填坑）：" class="headerlink" title="本博客内尚未写过讲解的（待填坑）："></a>本博客内尚未写过讲解的（待填坑）：</h3></li>
+<li><a href="https://wjr-z.com/Linear%20basis/">线性基</a></li>
+<li><a href="https://wjr-z.com/Linear%20sieve/">线性筛</a></li>
+<li><a href="https://wjr-z.com/KMP/">KMP</a></li>
+<li><a href="https://wjr-z.com/SAM">SAM</a></li>
+<li><a href="http://wjr-z.com/FFT">FFT</a></li>
+<li><a href="https://wjr-z.com/Minimum%20Steiner%20tree/">最小斯坦纳树</a></li>
+<li><a href="https://wjr-z.com/莫比乌斯反演学习/">莫比乌斯反演</a><h3 id="本博客内尚未写过讲解的（待填坑）："><a href="#本博客内尚未写过讲解的（待填坑）：" class="headerlink" title="本博客内尚未写过讲解的（待填坑）："></a>本博客内尚未写过讲解的（待填坑）：</h3></li>
 <li><a href="https://wjr-z.com">树状数组</a></li>
 <li><a href="https://wjr-z.com">线段树</a></li>
 <li><a href="https://wjr-z.com">树链剖分</a></li>

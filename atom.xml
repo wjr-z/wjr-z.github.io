@@ -6,7 +6,7 @@
   <link href="https://wjr-z.com/atom.xml" rel="self"/>
   
   <link href="https://wjr-z.com/"/>
-  <updated>2021-02-21T06:42:43.050Z</updated>
+  <updated>2021-02-21T06:49:30.165Z</updated>
   <id>https://wjr-z.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://wjr-z.com/%E5%B7%B2%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/"/>
     <id>https://wjr-z.com/%E5%B7%B2%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9%E6%B1%87%E6%80%BB/</id>
     <published>2021-02-21T06:32:50.000Z</published>
-    <updated>2021-02-21T06:42:43.050Z</updated>
+    <updated>2021-02-21T06:49:30.165Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="已学知识点："><a href="#已学知识点：" class="headerlink" title="已学知识点："></a>已学知识点：</h2><h3 id="本博客内写过讲解的："><a href="#本博客内写过讲解的：" class="headerlink" title="本博客内写过讲解的："></a>本博客内写过讲解的：</h3><a id="more"></a><ul><li><a href="https://wjr-z.com/%E7%BA%BF%E5%BD%A2%E5%9F%BA%E8%AF%A6%E8%A7%A3/">线性基</a></li><li><a href="https://wjr-z.com/%E7%BA%BF%E6%80%A7%E7%AD%9B%E8%AF%A6%E8%A7%A3/">线性筛</a></li><li><a href="https://wjr-z.com/KMP%E8%AF%A6%E8%A7%A3/">KMP</a></li><li><a href="https://wjr-z.com/SAM%E8%AF%A6%E8%A7%A3/">SAM</a></li><li><a href="https://wjr-z.com/FFT%E8%AF%A6%E8%A7%A3/">FFT</a></li><li><a href="https://wjr-z.com/%E6%9C%80%E5%B0%8F%E6%96%AF%E5%9D%A6%E7%BA%B3%E6%A0%91%E8%AF%A6%E8%A7%A3/">最小斯坦纳树</a></li><li>[莫比乌斯反演]<h3 id="本博客内尚未写过讲解的（待填坑）："><a href="#本博客内尚未写过讲解的（待填坑）：" class="headerlink" title="本博客内尚未写过讲解的（待填坑）："></a>本博客内尚未写过讲解的（待填坑）：</h3></li><li><a href="https://wjr-z.com">树状数组</a></li><li><a href="https://wjr-z.com">线段树</a></li><li><a href="https://wjr-z.com">树链剖分</a></li><li><a href="https://wjr-z.com">splay</a></li><li><a href="https://wjr-z.com">DP</a></li><li><span class="exturl" data-url="aHR0cHM6Ly93anItei9jb20=">单调队列<i class="fa fa-external-link-alt"></i></span></li><li><a href="https://wjr-z.com">二分</a></li><li><a href="https://wjr-z.com">点分治</a></li><li><a href="https://wjr-z.com">树上倍增</a></li><li><a href="https://wjr-z.com">RMQ</a></li><li><a href="https://wjr-z.com">LCT</a></li></ul><h2 id="准备学习的知识点："><a href="#准备学习的知识点：" class="headerlink" title="准备学习的知识点："></a>准备学习的知识点：</h2><ul><li>KD-tree</li><li></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="已学知识点："><a href="#已学知识点：" class="headerlink" title="已学知识点："></a>已学知识点：</h2><h3 id="本博客内写过讲解的："><a href="#本博客内写过讲解的：" class="headerlink" title="本博客内写过讲解的："></a>本博客内写过讲解的：</h3><a id="more"></a><ul><li><a href="https://wjr-z.com/Linear%20basis/">线性基</a></li><li><a href="https://wjr-z.com/Linear%20sieve/">线性筛</a></li><li><a href="https://wjr-z.com/KMP/">KMP</a></li><li><a href="https://wjr-z.com/SAM">SAM</a></li><li><a href="http://wjr-z.com/FFT">FFT</a></li><li><a href="https://wjr-z.com/Minimum%20Steiner%20tree/">最小斯坦纳树</a></li><li><a href="https://wjr-z.com/莫比乌斯反演学习/">莫比乌斯反演</a><h3 id="本博客内尚未写过讲解的（待填坑）："><a href="#本博客内尚未写过讲解的（待填坑）：" class="headerlink" title="本博客内尚未写过讲解的（待填坑）："></a>本博客内尚未写过讲解的（待填坑）：</h3></li><li><a href="https://wjr-z.com">树状数组</a></li><li><a href="https://wjr-z.com">线段树</a></li><li><a href="https://wjr-z.com">树链剖分</a></li><li><a href="https://wjr-z.com">splay</a></li><li><a href="https://wjr-z.com">DP</a></li><li><span class="exturl" data-url="aHR0cHM6Ly93anItei9jb20=">单调队列<i class="fa fa-external-link-alt"></i></span></li><li><a href="https://wjr-z.com">二分</a></li><li><a href="https://wjr-z.com">点分治</a></li><li><a href="https://wjr-z.com">树上倍增</a></li><li><a href="https://wjr-z.com">RMQ</a></li><li><a href="https://wjr-z.com">LCT</a></li></ul><h2 id="准备学习的知识点："><a href="#准备学习的知识点：" class="headerlink" title="准备学习的知识点："></a>准备学习的知识点：</h2><ul><li>KD-tree</li><li></li></ul>]]></content>
     
     
     <summary type="html">&lt;h2 id=&quot;已学知识点：&quot;&gt;&lt;a href=&quot;#已学知识点：&quot; class=&quot;headerlink&quot; title=&quot;已学知识点：&quot;&gt;&lt;/a&gt;已学知识点：&lt;/h2&gt;&lt;h3 id=&quot;本博客内写过讲解的：&quot;&gt;&lt;a href=&quot;#本博客内写过讲解的：&quot; class=&quot;headerlink&quot; title=&quot;本博客内写过讲解的：&quot;&gt;&lt;/a&gt;本博客内写过讲解的：&lt;/h3&gt;</summary>
