@@ -1484,37 +1484,4 @@ f(n)=\sum_{n|d}\mu(\frac{d}{n})F(d)</script></li>
         <tag>线性筛</tag>
       </tags>
   </entry>
-  <entry>
-    <title>已学知识点汇总</title>
-    <url>/%E5%B7%B2%E5%AD%A6%E7%AE%97%E6%B3%95%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<h2 id="已学知识点："><a href="#已学知识点：" class="headerlink" title="已学知识点："></a>已学知识点：</h2><h3 id="本博客内写过讲解的："><a href="#本博客内写过讲解的：" class="headerlink" title="本博客内写过讲解的："></a>本博客内写过讲解的：</h3><a id="more"></a>
-<ul>
-<li><a href="https://wjr-z.com/Linear%20basis/">线性基</a></li>
-<li><a href="https://wjr-z.com/Linear%20sieve/">线性筛</a></li>
-<li><a href="https://wjr-z.com/KMP/">KMP</a></li>
-<li><a href="https://wjr-z.com/SAM">SAM</a></li>
-<li><a href="http://wjr-z.com/FFT">FFT</a></li>
-<li><a href="https://wjr-z.com/Minimum%20Steiner%20tree/">最小斯坦纳树</a></li>
-<li><a href="https://wjr-z.com/莫比乌斯反演学习/">莫比乌斯反演</a><h3 id="本博客内尚未写过讲解的（待填坑）："><a href="#本博客内尚未写过讲解的（待填坑）：" class="headerlink" title="本博客内尚未写过讲解的（待填坑）："></a>本博客内尚未写过讲解的（待填坑）：</h3></li>
-<li><a href="https://wjr-z.com">树状数组</a></li>
-<li><a href="https://wjr-z.com">线段树</a></li>
-<li><a href="https://wjr-z.com">树链剖分</a></li>
-<li><a href="https://wjr-z.com">splay</a></li>
-<li><a href="https://wjr-z.com">DP</a></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly93anItei9jb20=">单调队列<i class="fa fa-external-link-alt"></i></span></li>
-<li><a href="https://wjr-z.com">二分</a></li>
-<li><a href="https://wjr-z.com">点分治</a></li>
-<li><a href="https://wjr-z.com">树上倍增</a></li>
-<li><a href="https://wjr-z.com">RMQ</a></li>
-<li><a href="https://wjr-z.com">LCT</a></li>
-</ul>
-<h2 id="准备学习的知识点："><a href="#准备学习的知识点：" class="headerlink" title="准备学习的知识点："></a>准备学习的知识点：</h2><ul>
-<li>KD-tree</li>
-<li></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>汇总</tag>
-      </tags>
-  </entry>
 </search>
