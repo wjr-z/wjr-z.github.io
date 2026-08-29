@@ -75,6 +75,13 @@
       "description": "把正在学习的知识点和阶段性计划留在这里。",
       "accent": "#8e86be",
       "aliases": ["notes", "学习备忘录"]
+    },
+    "AI": {
+        "label": "AI",
+        "english": "AI",
+        "description": "人工智能",
+        "accent": "#f39c12",
+        "aliases": ["AI", "ai", "人工智能"]
     }
   }
 }
