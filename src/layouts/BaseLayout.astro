@@ -18,7 +18,7 @@ const pathname = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f5f1e8" />
+    <meta name="theme-color" content="#eef4fb" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href={new URL(pathname, Astro.site ?? Astro.url)} />
     <title>{title}</title>
@@ -40,7 +40,7 @@ const pathname = Astro.url.pathname;
       <slot />
     </main>
     <footer class="site-footer">
-      <span>© {new Date().getFullYear()} wjr-z</span>
+      <span>© {new Date().getFullYear()} {site.site.brand}</span>
       <span>{site.site.footerCredit}</span>
     </footer>
   </body>

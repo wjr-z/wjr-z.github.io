@@ -3,7 +3,7 @@
     "defaultTitle": "wjr-z / 个人学习记录",
     "defaultDescription": "关于算法、代码和长期学习的记录。",
     "brand": "wjr-z",
-    "brandMark": "WJ",
+    "brandMark": "WJR",
     "brandAriaLabel": "返回首页",
     "navigationAriaLabel": "主导航",
     "footerCredit": "Built with Astro · Notes from the edge of the editor"
@@ -21,7 +21,7 @@
     "archiveLink": "浏览全部文章",
     "archiveHref": "/archives/",
     "statsAriaLabel": "站点统计",
-    "signalStamp": "WJ / 01",
+    "signalStamp": "WJR / 01",
     "signalLabel": "CURRENT SIGNAL",
     "sectionsEyebrow": "01 / KNOWLEDGE AREAS",
     "sectionsTitle": "按栏目阅读",

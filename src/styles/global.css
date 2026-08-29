@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --paper: #f7f6f2;
-  --paper-deep: #eeece6;
-  --surface: #fffefa;
-  --ink: #202522;
-  --muted: #6d746e;
-  --line: #d8d7d0;
-  --coral: #f06449;
-  --blue: #2364aa;
-  --green: #477d63;
+  --paper: #f4f7fb;
+  --paper-deep: #e9eff7;
+  --surface: #fcfdff;
+  --ink: #263548;
+  --muted: #68778a;
+  --line: #d7e0ec;
+  --coral: #74a8d5;
+  --blue: #6389bd;
+  --green: #8e86be;
   --radius-card: 10px;
   --radius-control: 8px;
   --radius-mark: 6px;
@@ -28,7 +28,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
-  background: linear-gradient(180deg, #faf9f6 0%, var(--paper) 48%, #f0eee8 100%);
+  background: linear-gradient(135deg, #fbfdff 0%, var(--paper) 55%, #f3f0fa 100%);
   color: var(--ink);
   font-family: var(--display);
   line-height: 1.65;
@@ -71,7 +71,7 @@ main,
   justify-content: space-between;
   min-height: 96px;
   border-bottom: 1px solid var(--line);
-  background: rgba(245, 241, 232, 0.88);
+  background: rgba(244, 248, 253, 0.88);
   backdrop-filter: blur(12px);
 }
 
@@ -90,7 +90,7 @@ main,
   height: 34px;
   place-items: center;
   border-radius: var(--radius-mark);
-  background: var(--coral);
+  background: linear-gradient(135deg, rgba(116, 168, 213, 0.94), rgba(151, 139, 195, 0.92));
   color: var(--paper);
   font-family: var(--mono);
   font-size: 0.75rem;
@@ -140,8 +140,8 @@ nav a.active::after {
   grid-template-columns: minmax(0, 1fr) 260px;
   gap: 80px;
   align-items: end;
-  min-height: 550px;
-  padding-block: 96px 112px;
+  min-height: 470px;
+  padding-block: 56px 78px;
 }
 
 .home-intro::after {
@@ -232,8 +232,10 @@ p {
   margin-bottom: 28px;
   padding: 12px 14px;
   border-radius: var(--radius-card);
-  background: var(--coral);
-  color: var(--paper);
+  border: 1px solid rgba(99, 137, 189, 0.22);
+  background: linear-gradient(135deg, rgba(116, 168, 213, 0.34), rgba(151, 139, 195, 0.36));
+  box-shadow: 0 10px 24px rgba(99, 137, 189, 0.12);
+  color: var(--ink);
 }
 
 .signal-panel__stamp span {
@@ -243,7 +245,7 @@ p {
 
 .signal-panel__stamp strong {
   margin: 0;
-  color: var(--paper);
+  color: var(--blue);
   font-family: var(--mono);
   font-size: 2.4rem;
   line-height: 0.9;
@@ -577,7 +579,7 @@ p {
 }
 
 .tag-cloud a:hover {
-  background: rgba(240, 100, 73, 0.12);
+  background: rgba(116, 168, 213, 0.16);
   color: var(--coral);
 }
 
@@ -764,7 +766,7 @@ p {
   margin-left: 0;
   padding: 12px 18px;
   border-left: 3px solid var(--blue);
-  background: rgba(234, 227, 213, 0.65);
+  background: rgba(219, 230, 243, 0.7);
   color: var(--muted);
 }
 
@@ -884,7 +886,7 @@ p {
   .home-intro {
     display: block;
     min-height: auto;
-    padding-block: 70px 86px;
+    padding-block: 46px 64px;
   }
 
   .home-intro h1 {
@@ -900,7 +902,7 @@ p {
 
   .signal-panel {
     max-width: 330px;
-    margin-top: 70px;
+    margin-top: 44px;
   }
 
   .section-grid,
