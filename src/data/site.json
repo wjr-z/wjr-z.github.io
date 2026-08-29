@@ -46,7 +46,7 @@
   },
   "sectionPage": {
     "eyebrowPrefix": "SECTION /",
-    "backLink": "← 返回栏目",
+    "backLink": "返回栏目",
     "layout": "cards",
     "layoutLabel": "文章显示",
     "cardsLabel": "方片",

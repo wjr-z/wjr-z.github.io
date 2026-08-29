@@ -15,7 +15,7 @@ const sectionInfo = sections[section];
 
 <BaseLayout title={`${sectionInfo.label} | wjr-z`} description={sectionInfo.description}>
   <section class="listing-page">
-    <a class="back-link section-back-link" href="/sections/">{site.sectionPage.backLink}</a>
+    <a class="back-link section-back-link" href="/sections/"><span class="back-link__arrow" aria-hidden="true">←</span>{site.sectionPage.backLink}</a>
     <header class="listing-header">
       <p class="eyebrow">{site.sectionPage.eyebrowPrefix} {sectionInfo.english}</p>
       <h1>{sectionInfo.label}</h1>

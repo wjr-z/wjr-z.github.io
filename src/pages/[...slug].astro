@@ -21,7 +21,7 @@ const dateLabel = date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'lo
 <BaseLayout title={`${title} | wjr-z`} description={`${title}，wjr-z 的学习记录。`}>
   <article class="article-page">
     <header class="article-header">
-      <a class="back-link" href="/archives/">← 返回归档</a>
+      <a class="back-link" href="/archives/"><span class="back-link__arrow" aria-hidden="true">←</span>返回归档</a>
       <p class="eyebrow">NOTE / {date.getFullYear()}</p>
       <h1>{title}</h1>
       <div class="article-meta">

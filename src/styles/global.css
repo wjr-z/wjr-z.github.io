@@ -753,8 +753,24 @@ p {
   font-size: 0.72rem;
 }
 
+.back-link__arrow {
+  display: inline-block;
+  margin-right: 7px;
+  color: var(--blue);
+  font-family: Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 0.7;
+  vertical-align: -0.08em;
+  transition: transform 180ms ease;
+}
+
 .back-link:hover {
   color: var(--coral);
+}
+
+.back-link:hover .back-link__arrow {
+  transform: translateX(-2px);
 }
 
 .article-header h1 {
@@ -961,6 +977,13 @@ p {
   transform: translateY(8px);
   transition: opacity 180ms ease, transform 180ms ease, background 180ms ease;
   visibility: hidden;
+}
+
+.back-to-top__icon {
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .back-to-top.is-visible {

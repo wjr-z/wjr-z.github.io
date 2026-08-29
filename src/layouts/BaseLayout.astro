@@ -43,7 +43,7 @@ const pathname = Astro.url.pathname;
       <span>© {new Date().getFullYear()} {site.site.brand}</span>
       <span>{site.site.footerCredit}</span>
     </footer>
-    <a class="back-to-top" href="#top" aria-label={site.site.backToTopLabel} title={site.site.backToTopLabel} aria-hidden="true" data-back-to-top data-show-after={site.site.backToTop.showAfterScroll} data-hide-after-up={site.site.backToTop.hideAfterUpScroll}>↑</a>
+    <a class="back-to-top" href="#top" aria-label={site.site.backToTopLabel} title={site.site.backToTopLabel} aria-hidden="true" data-back-to-top data-show-after={site.site.backToTop.showAfterScroll} data-hide-after-up={site.site.backToTop.hideAfterUpScroll}><span class="back-to-top__icon" aria-hidden="true">↑</span></a>
   </body>
 </html>
 
