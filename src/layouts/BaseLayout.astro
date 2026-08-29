@@ -43,23 +43,40 @@ const pathname = Astro.url.pathname;
       <span>© {new Date().getFullYear()} {site.site.brand}</span>
       <span>{site.site.footerCredit}</span>
     </footer>
-    <a class="back-to-top" href="#top" aria-label={site.site.backToTopLabel} title={site.site.backToTopLabel} aria-hidden="true" data-back-to-top>↑</a>
+    <a class="back-to-top" href="#top" aria-label={site.site.backToTopLabel} title={site.site.backToTopLabel} aria-hidden="true" data-back-to-top data-show-after={site.site.backToTop.showAfterScroll} data-hide-after-up={site.site.backToTop.hideAfterUpScroll}>↑</a>
   </body>
 </html>
 
 <script>
   const backToTop = document.querySelector<HTMLElement>('[data-back-to-top]');
+  const showAfterScroll = Number(backToTop?.dataset.showAfter ?? 320);
+  const hideAfterUpScroll = Number(backToTop?.dataset.hideAfterUp ?? 240);
   let isVisible = false;
+  let previousScrollY = window.scrollY;
+  let upwardDistance = 0;
   let framePending = false;
 
   const updateBackToTop = () => {
     const currentScrollY = window.scrollY;
-    if (!isVisible && currentScrollY > 320) isVisible = true;
-    if (isVisible && currentScrollY < 96) isVisible = false;
+    const scrollDelta = currentScrollY - previousScrollY;
+
+    if (!isVisible) {
+      if (currentScrollY > showAfterScroll) upwardDistance = 0;
+      if (currentScrollY > showAfterScroll) isVisible = true;
+    } else if (scrollDelta < 0) {
+      upwardDistance -= scrollDelta;
+      if (upwardDistance >= hideAfterUpScroll) {
+        isVisible = false;
+        upwardDistance = 0;
+      }
+    } else if (scrollDelta > 0) {
+      upwardDistance = 0;
+    }
 
     backToTop?.classList.toggle('is-visible', isVisible);
     backToTop?.setAttribute('aria-hidden', String(!isVisible));
     framePending = false;
+    previousScrollY = currentScrollY;
   };
 
   window.addEventListener('scroll', () => {

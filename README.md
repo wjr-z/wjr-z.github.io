@@ -67,6 +67,8 @@ tags: DP, 动态规划
 - `navigation`：顶部导航的链接和显示名称。
 - `site`：站点标题、描述、品牌名称、页脚文字等公共信息。
 
+返回顶部按钮的滚动阈值也在 `site.backToTop` 中配置：`showAfterScroll` 是向下滚动多少像素后显示，`hideAfterUpScroll` 是显示后向上滚动多少像素才隐藏。当前值分别为 `320` 和 `240`，可以避免一次鼠标滚轮操作就误隐藏。
+
 进入具体栏目后，可以通过页面上的“方片 / 平铺”控件切换文章展示形式，选择会保存在当前浏览器中。`sectionPage.layout` 是首次访问时的默认值：`cards` 是当前的小方块样式，`compact` 是更紧凑的平铺列表。栏目菜单和首页中的栏目入口始终保持小方块样式。
 
 新增栏目时，只需在 `src/data/site.json` 的 `sections` 下增加一个对象。对象的键是稳定的英文 ID，也会成为 URL 的一部分；`label` 是页面显示的中文名，`english` 是英文眉题，`description` 是栏目介绍，`aliases` 是文章 frontmatter 中允许使用的名称。例如：

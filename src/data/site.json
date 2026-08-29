@@ -7,6 +7,10 @@
     "brandAriaLabel": "返回首页",
     "navigationAriaLabel": "主导航",
     "backToTopLabel": "回到顶部",
+    "backToTop": {
+      "showAfterScroll": 320,
+      "hideAfterUpScroll": 240
+    },
     "footerCredit": "Built with Astro · Notes from the edge of the editor"
   },
   "navigation": [
