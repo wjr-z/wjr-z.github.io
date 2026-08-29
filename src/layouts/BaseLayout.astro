@@ -23,7 +23,7 @@ const pathname = Astro.url.pathname;
     <link rel="canonical" href={new URL(pathname, Astro.site ?? Astro.url)} />
     <title>{title}</title>
   </head>
-  <body>
+  <body id="top">
     <div class="page-grid" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="/" aria-label={site.site.brandAriaLabel}>
@@ -43,5 +43,28 @@ const pathname = Astro.url.pathname;
       <span>© {new Date().getFullYear()} {site.site.brand}</span>
       <span>{site.site.footerCredit}</span>
     </footer>
+    <a class="back-to-top" href="#top" aria-label={site.site.backToTopLabel} title={site.site.backToTopLabel} aria-hidden="true" data-back-to-top>↑</a>
   </body>
 </html>
+
+<script>
+  const backToTop = document.querySelector<HTMLElement>('[data-back-to-top]');
+  let isVisible = false;
+  let framePending = false;
+
+  const updateBackToTop = () => {
+    const currentScrollY = window.scrollY;
+    if (!isVisible && currentScrollY > 320) isVisible = true;
+    if (isVisible && currentScrollY < 96) isVisible = false;
+
+    backToTop?.classList.toggle('is-visible', isVisible);
+    backToTop?.setAttribute('aria-hidden', String(!isVisible));
+    framePending = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(updateBackToTop);
+  }, { passive: true });
+</script>

@@ -6,6 +6,7 @@
     "brandMark": "WJR",
     "brandAriaLabel": "返回首页",
     "navigationAriaLabel": "主导航",
+    "backToTopLabel": "回到顶部",
     "footerCredit": "Built with Astro · Notes from the edge of the editor"
   },
   "navigation": [
