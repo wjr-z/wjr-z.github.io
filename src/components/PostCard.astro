@@ -28,5 +28,4 @@ const dateLabel = date.toLocaleDateString('zh-CN', {
       {tags.slice(0, 3).map((tag) => <li><a href={`/tags/#${encodeURIComponent(tag)}`}>{tag}</a></li>)}
     </ul>
   )}
-  <a class="read-link" href={href} aria-label={`阅读 ${title}`}>打开文章 <span aria-hidden="true">↗</span></a>
 </article>

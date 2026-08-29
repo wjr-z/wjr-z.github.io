@@ -15,14 +15,52 @@ const sectionInfo = sections[section];
 
 <BaseLayout title={`${sectionInfo.label} | wjr-z`} description={sectionInfo.description}>
   <section class="listing-page">
+    <a class="back-link section-back-link" href="/sections/">{site.sectionPage.backLink}</a>
     <header class="listing-header">
       <p class="eyebrow">{site.sectionPage.eyebrowPrefix} {sectionInfo.english}</p>
       <h1>{sectionInfo.label}</h1>
       <p>{sectionInfo.description}</p>
     </header>
-    <div class="section-summary"><strong>{posts.length}</strong><span>{site.sectionPage.summaryLabel}<br />{site.sectionPage.summaryDescription}</span></div>
-    <section class="post-grid post-grid--section" aria-label={sectionInfo.label}>
+    <div class="section-toolbar">
+      <div class="section-summary"><strong>{posts.length}</strong><span>{site.sectionPage.summaryLabel}<br />{site.sectionPage.summaryDescription}</span></div>
+      <div class="layout-switcher" role="group" aria-label={site.sectionPage.layoutLabel}>
+        <span class="layout-switcher__label">{site.sectionPage.layoutLabel}</span>
+        <div class="layout-switcher__controls">
+          <button type="button" class:list={{ active: site.sectionPage.layout !== 'compact' }} aria-pressed={site.sectionPage.layout !== 'compact'} data-layout="cards">{site.sectionPage.cardsLabel}</button>
+          <button type="button" class:list={{ active: site.sectionPage.layout === 'compact' }} aria-pressed={site.sectionPage.layout === 'compact'} data-layout="compact">{site.sectionPage.compactLabel}</button>
+        </div>
+      </div>
+    </div>
+    <section class:list={['post-grid', 'post-grid--section', { 'post-grid--compact': site.sectionPage.layout === 'compact' }]} data-section-posts data-default-layout={site.sectionPage.layout} aria-label={sectionInfo.label}>
       {posts.map((post) => <PostCard post={post} />)}
     </section>
   </section>
 </BaseLayout>
+
+<script>
+  const grid = document.querySelector<HTMLElement>('[data-section-posts]');
+  const controls = document.querySelectorAll<HTMLButtonElement>('[data-layout]');
+  const storageKey = 'wjr-z:section-post-layout';
+
+  const isLayout = (value: string | null): value is 'cards' | 'compact' => value === 'cards' || value === 'compact';
+  const setLayout = (layout: 'cards' | 'compact') => {
+    grid?.classList.toggle('post-grid--compact', layout === 'compact');
+    controls.forEach((control) => {
+      control.classList.toggle('active', control.dataset.layout === layout);
+      control.setAttribute('aria-pressed', String(control.dataset.layout === layout));
+    });
+  };
+
+  const savedLayout = localStorage.getItem(storageKey);
+  const defaultLayout = grid?.dataset.defaultLayout === 'compact' ? 'compact' : 'cards';
+  setLayout(isLayout(savedLayout) ? savedLayout : defaultLayout);
+
+  controls.forEach((control) => {
+    control.addEventListener('click', () => {
+      const layout = control.dataset.layout;
+      if (!isLayout(layout)) return;
+      setLayout(layout);
+      localStorage.setItem(storageKey, layout);
+    });
+  });
+</script>
