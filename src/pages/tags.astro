@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sections, type SectionId } from '../lib/sections';
+import { getPostSlug, getPostTitle } from '../lib/post-meta';
+
+const posts = await getCollection('blog');
+const hrefFor = (post: (typeof posts)[number]) => `/${encodeURI(getPostSlug(post))}/`;
+const tagGroups = (Object.keys(sections) as SectionId[]).map((section) => ({
+  section,
+  info: sections[section],
+  tags: [...new Set(posts.filter((post) => post.data.section === section).flatMap((post) => post.data.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN')),
+}));
+---
+
+<BaseLayout title="标签 | wjr-z">
+  <section class="listing-page">
+    <header class="listing-header">
+      <p class="eyebrow">04 / SUBJECT INDEX</p>
+      <h1>标签</h1>
+      <p>用主题重新穿过这份旧笔记。</p>
+    </header>
+    <div class="tag-groups">
+      {tagGroups.map(({ section, info, tags }) => (
+        <section class="tag-group">
+          <header class="tag-group__header">
+            <div><p class="eyebrow">{info.english}</p><h2>{info.label}</h2></div>
+            <span>{tags.length} 个标签</span>
+          </header>
+          <div class="tag-cloud" aria-label={`${info.label}标签`}>
+            {tags.map((tag) => {
+              const tagId = `${section}-${encodeURIComponent(tag)}`;
+              return <a href={`#${tagId}`}>{tag} <sup>{posts.filter((post) => post.data.section === section && post.data.tags.includes(tag)).length}</sup></a>;
+            })}
+          </div>
+          <div class="tag-sections">
+            {tags.map((tag) => (
+              <section class="tag-section" id={`${section}-${encodeURIComponent(tag)}`}>
+                <div class="section-heading"><h3>#{tag}</h3><span>{posts.filter((post) => post.data.section === section && post.data.tags.includes(tag)).length} 篇</span></div>
+                <div class="tag-posts">
+                  {posts.filter((post) => post.data.section === section && post.data.tags.includes(tag)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).map((post) => <a href={hrefFor(post)}>{getPostTitle(post)}</a>)}
+                </div>
+              </section>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

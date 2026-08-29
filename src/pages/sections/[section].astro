@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { sections, site, type SectionId } from '../../lib/sections';
+
+export function getStaticPaths() {
+  return (Object.keys(sections) as SectionId[]).map((section) => ({ params: { section }, props: { section } }));
+}
+
+const { section } = Astro.props;
+const posts = (await getCollection('blog', (post) => post.data.section === section)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const sectionInfo = sections[section];
+---
+
+<BaseLayout title={`${sectionInfo.label} | wjr-z`} description={sectionInfo.description}>
+  <section class="listing-page">
+    <header class="listing-header">
+      <p class="eyebrow">{site.sectionPage.eyebrowPrefix} {sectionInfo.english}</p>
+      <h1>{sectionInfo.label}</h1>
+      <p>{sectionInfo.description}</p>
+    </header>
+    <div class="section-summary"><strong>{posts.length}</strong><span>{site.sectionPage.summaryLabel}<br />{site.sectionPage.summaryDescription}</span></div>
+    <section class="post-grid post-grid--section" aria-label={sectionInfo.label}>
+      {posts.map((post) => <PostCard post={post} />)}
+    </section>
+  </section>
+</BaseLayout>

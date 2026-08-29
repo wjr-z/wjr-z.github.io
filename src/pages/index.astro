@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { sections, site } from '../lib/sections';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const latest = posts.slice(0, 12);
+const tagCount = new Set(posts.flatMap((post) => post.data.tags)).size;
+const yearCount = new Set(posts.map((post) => post.data.date.getFullYear())).size;
+const latestDate = posts[0]?.data.date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long' });
+const sectionCounts = Object.fromEntries(Object.keys(sections).map((id) => [id, posts.filter((post) => post.data.section === id).length]));
+---
+
+<BaseLayout>
+  <section class="home-intro">
+    <div>
+      <p class="eyebrow">{site.home.eyebrow}</p>
+      <h1>{site.home.title}</h1>
+      <a class="button-link" href={site.home.archiveHref}>{site.home.archiveLink} <span aria-hidden="true">↗</span></a>
+    </div>
+    <aside class="signal-panel" aria-label={site.home.statsAriaLabel}>
+      <div class="signal-panel__stamp"><span>{site.home.signalStamp}</span><strong>{posts.length}</strong></div>
+      <span class="signal-panel__label">{site.home.signalLabel}</span>
+      <strong>{latestDate ?? 'ARCHIVE'}</strong>
+      <dl>
+        <div><dt>文章</dt><dd>{posts.length}</dd></div>
+        <div><dt>标签</dt><dd>{tagCount}</dd></div>
+        <div><dt>年份</dt><dd>{yearCount}</dd></div>
+      </dl>
+    </aside>
+  </section>
+
+  <section class="section-heading section-heading--with-link">
+    <div>
+      <p class="eyebrow">{site.home.sectionsEyebrow}</p>
+      <h2>{site.home.sectionsTitle}</h2>
+    </div>
+    <a href={site.home.sectionsHref}>{site.home.sectionsLink} <span aria-hidden="true">→</span></a>
+  </section>
+  <section class="section-grid" aria-label={site.home.sectionsAriaLabel}>
+    {(Object.entries(sections) as [keyof typeof sections, (typeof sections)[keyof typeof sections]][]).map(([id, section]) => (
+      <a class="section-card" href={`/sections/${id}/`}>
+        <span class="section-card__index">{String(Object.keys(sections).indexOf(id) + 1).padStart(2, '0')}</span>
+        <h2>{section.label}</h2>
+        <p>{section.description}</p>
+        <strong>{sectionCounts[id] ?? 0} 篇 <span aria-hidden="true">↗</span></strong>
+      </a>
+    ))}
+  </section>
+
+  <section class="section-heading section-heading--with-link">
+    <div>
+      <p class="eyebrow">{site.home.recentEyebrow}</p>
+      <h2>{site.home.recentTitle}</h2>
+    </div>
+    <a href={site.home.recentHref}>{site.home.recentLink} <span aria-hidden="true">→</span></a>
+  </section>
+  <section class="post-grid" aria-label={site.home.recentAriaLabel}>
+    {latest.map((post) => <PostCard post={post} />)}
+  </section>
+</BaseLayout>

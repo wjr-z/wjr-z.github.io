@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPostSlug, getPostTitle } from '../lib/post-meta';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const grouped = posts.reduce((groups, post) => {
+  const year = post.data.date.getFullYear();
+  const list = groups.get(year) ?? [];
+  list.push(post);
+  groups.set(year, list);
+  return groups;
+}, new Map<number, typeof posts>());
+const hrefFor = (post: (typeof posts)[number]) => `/${encodeURI(getPostSlug(post))}/`;
+---
+
+<BaseLayout title="归档 | wjr-z">
+  <section class="listing-page">
+    <header class="listing-header">
+      <p class="eyebrow">03 / CHRONOLOGICAL INDEX</p>
+      <h1>归档</h1>
+      <p>{posts.length} 篇文章，按时间排列。</p>
+    </header>
+    <div class="archive-list">
+      {[...grouped].map(([year, yearPosts]) => (
+        <section class="archive-year">
+          <h2>{year}</h2>
+          <div>
+            {yearPosts.map((post) => (
+              <a class="archive-item" href={hrefFor(post)}>
+                <time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('zh-CN', { month: '2-digit', day: '2-digit' })}</time>
+                <span>{getPostTitle(post)}</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getPostSlug, getPostTitle } from '../lib/post-meta';
+
+type Props = {
+  post: CollectionEntry<'blog'>;
+};
+
+const { post } = Astro.props;
+const { date, tags } = post.data;
+const title = getPostTitle(post);
+const href = `/${encodeURI(getPostSlug(post))}/`;
+const dateLabel = date.toLocaleDateString('zh-CN', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<article class="post-card">
+  <div class="post-card__meta">
+    <time datetime={date.toISOString()}>{dateLabel}</time>
+    <span>NOTE / {date.getFullYear()}</span>
+  </div>
+  <h2><a href={href}>{title}</a></h2>
+  {tags.length > 0 && (
+    <ul class="tag-list" aria-label="文章标签">
+      {tags.slice(0, 3).map((tag) => <li><a href={`/tags/#${encodeURIComponent(tag)}`}>{tag}</a></li>)}
+    </ul>
+  )}
+  <a class="read-link" href={href} aria-label={`阅读 ${title}`}>打开文章 <span aria-hidden="true">↗</span></a>
+</article>

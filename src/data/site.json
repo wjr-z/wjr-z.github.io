@@ -1,0 +1,67 @@
+{
+  "site": {
+    "defaultTitle": "wjr-z / 个人学习记录",
+    "defaultDescription": "关于算法、代码和长期学习的记录。",
+    "brand": "wjr-z",
+    "brandMark": "WJ",
+    "brandAriaLabel": "返回首页",
+    "navigationAriaLabel": "主导航",
+    "footerCredit": "Built with Astro · Notes from the edge of the editor"
+  },
+  "navigation": [
+    { "href": "/", "label": "首页" },
+    { "href": "/sections/", "label": "栏目" },
+    { "href": "/archives/", "label": "归档" },
+    { "href": "/tags/", "label": "标签" },
+    { "href": "/about/", "label": "关于" }
+  ],
+  "home": {
+    "eyebrow": "PERSONAL KNOWLEDGE ARCHIVE / 2019—NOW",
+    "title": "个人博客",
+    "archiveLink": "浏览全部文章",
+    "archiveHref": "/archives/",
+    "statsAriaLabel": "站点统计",
+    "signalStamp": "WJ / 01",
+    "signalLabel": "CURRENT SIGNAL",
+    "sectionsEyebrow": "01 / KNOWLEDGE AREAS",
+    "sectionsTitle": "按栏目阅读",
+    "sectionsLink": "所有栏目",
+    "sectionsHref": "/sections/",
+    "sectionsAriaLabel": "文章栏目",
+    "recentEyebrow": "02 / RECENTLY WRITTEN",
+    "recentTitle": "最近的笔记",
+    "recentLink": "查看时间线",
+    "recentHref": "/archives/",
+    "recentAriaLabel": "最近文章"
+  },
+  "sectionsPage": {
+    "eyebrow": "06 / KNOWLEDGE AREAS",
+    "title": "栏目",
+    "description": "先选择一片领域，再进入具体的笔记。"
+  },
+  "sectionPage": {
+    "eyebrowPrefix": "SECTION /",
+    "summaryLabel": "篇文章",
+    "summaryDescription": "等待再次阅读"
+  },
+  "sections": {
+    "computer-contest": {
+      "label": "计算机竞赛",
+      "english": "COMPUTER CONTEST",
+      "description": "算法题解、比赛记录与竞赛中积累的解题模板。",
+      "aliases": ["computer-contest", "computer_contest", "computer contest", "计算机竞赛"]
+    },
+    "engineering": {
+      "label": "工程实践",
+      "english": "ENGINEERING PRACTICE",
+      "description": "工具、系统和那些让代码真正跑起来的细节。",
+      "aliases": ["engineering", "工程实践"]
+    },
+    "notes": {
+      "label": "学习备忘录",
+      "english": "LEARNING NOTES",
+      "description": "把正在学习的知识点和阶段性计划留在这里。",
+      "aliases": ["notes", "学习备忘录"]
+    }
+  }
+}

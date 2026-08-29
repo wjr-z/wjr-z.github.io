@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import 'katex/dist/katex.min.css';
+import { site } from '../lib/sections';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.site.defaultTitle, description = site.site.defaultDescription } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f1e8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={new URL(pathname, Astro.site ?? Astro.url)} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page-grid" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label={site.site.brandAriaLabel}>
+        <span class="brand-mark">{site.site.brandMark}</span>
+        <span>{site.site.brand}</span>
+      </a>
+      <nav aria-label={site.site.navigationAriaLabel}>
+        {site.navigation.map((item) => (
+          <a class:list={[{ active: item.href === '/' ? pathname === '/' : pathname.startsWith(item.href) }]} href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <span>© {new Date().getFullYear()} wjr-z</span>
+      <span>{site.site.footerCredit}</span>
+    </footer>
+  </body>
+</html>

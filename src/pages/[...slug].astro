@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPostSlug, getPostTitle } from '../lib/post-meta';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: getPostSlug(post) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { date, updated, tags } = post.data;
+const title = getPostTitle(post);
+const dateLabel = date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout title={`${title} | wjr-z`} description={`${title}，wjr-z 的学习记录。`}>
+  <article class="article-page">
+    <header class="article-header">
+      <a class="back-link" href="/archives/">← 返回归档</a>
+      <p class="eyebrow">NOTE / {date.getFullYear()}</p>
+      <h1>{title}</h1>
+      <div class="article-meta">
+        <time datetime={date.toISOString()}>发表于 {dateLabel}</time>
+        {updated && <span>更新于 {updated.toLocaleDateString('zh-CN')}</span>}
+      </div>
+      {tags.length > 0 && <div class="article-tags">{tags.map((tag) => <a href={`/tags/#${encodeURIComponent(tag)}`}>#{tag}</a>)}</div>}
+    </header>
+    <div class="article-body markdown-content">
+      <Content />
+    </div>
+    <footer class="article-footer">
+      <a href="/archives/">← 所有文章</a>
+      <a href="/">回到首页 ↑</a>
+    </footer>
+  </article>
+</BaseLayout>

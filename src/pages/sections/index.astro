@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sections, site } from '../../lib/sections';
+
+const posts = await getCollection('blog');
+---
+
+<BaseLayout title={`${site.sectionsPage.title} | wjr-z`}>
+  <section class="listing-page">
+    <header class="listing-header">
+      <p class="eyebrow">{site.sectionsPage.eyebrow}</p>
+      <h1>{site.sectionsPage.title}</h1>
+      <p>{site.sectionsPage.description}</p>
+    </header>
+    <div class="section-grid section-grid--listing">
+      {(Object.entries(sections) as [keyof typeof sections, (typeof sections)[keyof typeof sections]][]).map(([id, section], index) => {
+        const count = posts.filter((post) => post.data.section === id).length;
+        return <a class="section-card" href={`/sections/${id}/`}><span class="section-card__index">{String(index + 1).padStart(2, '0')}</span><h2>{section.label}</h2><p>{section.description}</p><strong>{count} 篇 <span aria-hidden="true">↗</span></strong></a>;
+      })}
+    </div>
+  </section>
+</BaseLayout>
