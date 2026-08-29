@@ -69,11 +69,14 @@ tags: DP, 动态规划
 
 新增栏目时，只需在 `src/data/site.json` 的 `sections` 下增加一个对象。对象的键是稳定的英文 ID，也会成为 URL 的一部分；`label` 是页面显示的中文名，`english` 是英文眉题，`description` 是栏目介绍，`aliases` 是文章 frontmatter 中允许使用的名称。例如：
 
+每个栏目的 `accent` 字段控制栏目卡片和标签分组的强调色，使用 CSS 颜色值填写。
+
 ```json
 "reading": {
 	"label": "阅读记录",
 	"english": "READING NOTES",
 	"description": "读过的书、文章和留下来的思考。",
+	"accent": "#82a9d2",
 	"aliases": ["reading", "阅读记录"]
 }
 ```

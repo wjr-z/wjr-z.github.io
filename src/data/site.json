@@ -49,18 +49,21 @@
       "label": "计算机竞赛",
       "english": "COMPUTER CONTEST",
       "description": "算法题解、比赛记录与竞赛中积累的解题模板。",
+      "accent": "#74a8d5",
       "aliases": ["computer-contest", "computer_contest", "computer contest", "计算机竞赛"]
     },
     "engineering": {
       "label": "工程实践",
       "english": "ENGINEERING PRACTICE",
       "description": "工具、系统和那些让代码真正跑起来的细节。",
+      "accent": "#6389bd",
       "aliases": ["engineering", "工程实践"]
     },
     "notes": {
       "label": "学习备忘录",
       "english": "LEARNING NOTES",
       "description": "把正在学习的知识点和阶段性计划留在这里。",
+      "accent": "#8e86be",
       "aliases": ["notes", "学习备忘录"]
     }
   }

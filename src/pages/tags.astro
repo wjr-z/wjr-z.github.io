@@ -22,7 +22,7 @@ const tagGroups = (Object.keys(sections) as SectionId[]).map((section) => ({
     </header>
     <div class="tag-groups">
       {tagGroups.map(({ section, info, tags }) => (
-        <section class="tag-group">
+        <section class="tag-group" style={`--section-accent: ${info.accent}`}>
           <header class="tag-group__header">
             <div><p class="eyebrow">{info.english}</p><h2>{info.label}</h2></div>
             <span>{tags.length} 个标签</span>
